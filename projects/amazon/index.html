@@ -1,0 +1,303 @@
+html
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Amazon EMEA Food Safety Audit Intelligence Platform</title>
+<meta content="Case study of an EMEA food safety audit platform built from an Excel MVP and later scaled with Redshift and QuickSight." name="description"/>
+<link href="../../assets/css/pages/amazon.css" rel="stylesheet"/>
+<link href="../../assets/css/responsive.css" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="logo" href="../../index.html">Venkat</a>
+<div class="nav-links">
+<a href="../../index.html">About</a><a href="../../experience.html">Experience</a>
+<a class="active" href="../index.html">Projects</a><a href="../../contact.html">Contact</a>
+<a class="ask-ai-nav" href="../../ask-ai/">Ask AI</a></div>
+</div>
+</nav>
+<main>
+<section class="container hero">
+<a class="back" href="../index.html">← Back to projects</a>
+<div class="eyebrow">04 / Professional Project Amazon</div>
+<h1>EMEA Food Safety Audit <span>Intelligence Platform</span></h1>
+<p class="tagline">I built the first version of an audit reporting platform, proved the workflow with users, and helped scale the same approach across EMEA.</p>
+<div class="hero-grid">
+<div>
+<div class="meta-label">Role</div>
+<div class="meta-value">Project Management Intern<br/>EMEA Food Safety Operations</div>
+</div>
+<div>
+<p class="hero-copy">I started with an Excel MVP that brought audit history, findings and follow up into one view. I tested it with selected sites, defined the reporting and data logic, and built the QuickSight view. When the project moved to Redshift, I worked with the analytics and data engineering team on the data model and migration.</p>
+<div class="tags">
+<span class="tag">Amazon Redshift</span><span class="tag">QuickSight</span><span class="tag">Excel</span>
+<span class="tag">Data Integration</span><span class="tag">Audit Operations</span>
+</div>
+</div>
+</div><div class="nda">
+<strong>Confidentiality</strong>
+<p>Site names, audit records, finding details and internal workflow references are anonymized or simplified. The project flow and my role reflect the work I completed.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">01 / Problem</div>
+<div>
+<h2>I started with a reporting process that had to be rebuilt every audit cycle.</h2>
+<p class="section-copy">Audit findings, site history and follow up status were spread across recurring files and separate systems. The team could find the information, but bringing it together into one useful view took repeated manual work.</p>
+</div>
+</div>
+<div class="story-grid">
+<div class="story-card">
+<small>The problem</small>
+<h3>The audit history existed, but it was spread across different places.</h3>
+<p>Understanding one site meant bringing together current findings, earlier audits and follow up information.</p>
+</div>
+<div class="story-card dark">
+<small>My goal</small>
+<h3>Build one view that could carry the history forward.</h3>
+<p>The team needed to see what happened before, what was still open, who owned it and what needed attention next.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">02 / How I built it</div>
+<div>
+<h2>I proved the workflow with a simple version before helping scale it.</h2>
+<p class="section-copy">I started in Excel because it let me build and test the idea quickly with real users. Once the workflow was clear, the project moved to Redshift for the larger data setup while QuickSight remained the reporting layer.</p>
+</div>
+</div>
+<div class="evolution">
+<div class="stage">
+<small>Stage 01 Before</small>
+<h3>Separate files and systems</h3>
+<p>Audit reports, site history and action status had to be brought together manually.</p>
+</div>
+<div class="big-arrow">→</div>
+<div class="stage primary">
+<small>Stage 02 MVP</small>
+<h3>Excel and QuickSight</h3>
+<p>I built the first working version and used it to learn what the team actually needed.</p>
+</div>
+<div class="big-arrow">→</div>
+<div class="stage">
+<small>Stage 03 Scale</small>
+<h3>Redshift and QuickSight</h3>
+<p>I worked with the analytics and data engineering team as the model moved into a setup that could support more sites and history.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">03 / Data flow</div>
+<div>
+<h2>I connected the audit history to the work that happened after the audit.</h2>
+<p class="section-copy">The scaled flow brought audit data into Redshift and used QuickSight for the working view. Findings stayed connected to their follow up so the team could see both the audit result and what happened next.</p>
+</div>
+</div>
+<div class="pipeline">
+<div class="pipe-row">
+<div class="node"><small>Source</small><strong>External audit data</strong></div>
+<div class="arrow"></div>
+<div class="node"><small>Load</small><strong>Automated data flow</strong></div>
+<div class="arrow"></div>
+<div class="node primary"><small>Store</small><strong>Amazon Redshift</strong></div>
+<div class="arrow"></div>
+<div class="node"><small>View</small><strong>QuickSight</strong></div>
+<div class="arrow"></div>
+<div class="node"><small>Follow up</small><strong>Actions and tickets</strong></div>
+</div>
+<p class="pipe-note">Current and earlier audit data stayed in the same model, so the team could see a site's history without rebuilding it from separate files.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">04 / Data model</div>
+<div>
+<h2>I structured the data around the full life of a finding.</h2>
+<p class="section-copy">I connected each site and audit to its findings, owners, due dates and follow up status. That made it possible to follow an issue from the audit through to closure and compare it with earlier audit cycles.</p>
+</div>
+</div>
+<div class="model-grid">
+<div class="panel">
+<h3>What I connected</h3>
+<div class="entity-list">
+<div class="entity"><strong>Site</strong><span>Location and region</span></div>
+<div class="entity"><strong>Audit</strong><span>Date, type and overall result</span></div>
+<div class="entity"><strong>Finding</strong><span>Issue type, severity and audit link</span></div>
+<div class="entity"><strong>Corrective action</strong><span>Owner, due date, progress and closure</span></div>
+<div class="entity"><strong>Action / ticket</strong><span>Follow up work linked to the finding</span></div>
+</div>
+</div>
+<div class="panel">
+<h3>What the team could see</h3>
+<div class="entity-list">
+<div class="entity"><strong>History</strong><span>See whether the same issue appeared in earlier audits.</span></div>
+<div class="entity"><strong>Open issues</strong><span>See what was still open or overdue.</span></div>
+<div class="entity"><strong>Ownership</strong><span>See who was responsible for follow up.</span></div>
+<div class="entity"><strong>Site view</strong><span>Keep the same history between audit cycles.</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">05 / QuickSight view</div>
+<div>
+<h2>I built the reporting view around the questions the team needed to answer.</h2>
+<p class="section-copy">I organised the view around the follow up work instead of copying the structure of the source files.</p>
+</div>
+</div>
+<div class="view-grid">
+<div class="view-card">
+<small>01</small>
+<h3>What happened before?</h3>
+<p>Previous audits and repeat findings.</p>
+</div>
+<div class="view-card">
+<small>02</small>
+<h3>What is open now?</h3>
+<p>Current findings, severity and outstanding actions.</p>
+</div>
+<div class="view-card">
+<small>03</small>
+<h3>What is being fixed?</h3>
+<p>Owners, due dates and progress.</p>
+</div>
+<div class="view-card">
+<small>04</small>
+<h3>What needs attention next?</h3>
+<p>Overdue or repeat issues that still needed follow up.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">06 / Workflow</div>
+<div>
+<h2>I kept each finding connected to the follow up work.</h2>
+<p class="section-copy">The platform did more than show audit results. Each finding stayed connected to its owner, due date, progress and related actions.</p>
+</div>
+</div>
+<div class="workflow-grid">
+<div class="workflow">
+<h3>From audit to follow up</h3>
+<div class="steps">
+<div class="step"><div class="step-no">1</div><div><strong>Audit added</strong><p>The audit was connected to the correct site.</p></div></div>
+<div class="step"><div class="step-no">2</div><div><strong>Finding added</strong><p>The issue was mapped to a standard category and severity.</p></div></div>
+<div class="step"><div class="step-no">3</div><div><strong>Follow up tracked</strong><p>Owner, due date and progress stayed with the finding.</p></div></div>
+<div class="step"><div class="step-no">4</div><div><strong>Action linked</strong><p>Related actions and tickets stayed connected to the same issue.</p></div></div>
+</div>
+</div>
+<div class="workflow">
+<h3>Why I started with an MVP</h3>
+<div class="steps">
+<div class="step"><div class="step-no">A</div><div><strong>Test what mattered</strong><p>Users could work with the first version and show me which fields and views were useful.</p></div></div>
+<div class="step"><div class="step-no">B</div><div><strong>Learn before scaling</strong><p>The workflow was tested before the larger data setup was built.</p></div></div>
+<div class="step"><div class="step-no">C</div><div><strong>Keep the same idea</strong><p>Excel proved the workflow. Redshift and QuickSight made it easier to support the wider use case.</p></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">07 / Outcome</div>
+<div>
+<h2>I turned repeated audit consolidation into a view the team could keep using.</h2>
+<p class="section-copy">The final setup kept site history, findings and follow up connected across audit cycles. The team could work from the same history instead of rebuilding the picture from separate files each time.</p>
+</div>
+</div>
+<div class="before-after">
+<div class="ba">
+<small>Before</small>
+<h3>Each audit cycle started with repeated preparation.</h3>
+<ul>
+<li>Download audit files again</li>
+<li>Combine recurring files manually</li>
+<li>Check history across older files</li>
+<li>Track follow up in separate places</li>
+<li>Rebuild the reporting view</li>
+</ul>
+</div>
+<div class="ba">
+<small>After</small>
+<h3>The audit history stayed connected.</h3>
+<ul>
+<li>Keep audit and site history together</li>
+<li>Structure findings in one model</li>
+<li>Link follow up status to each finding</li>
+<li>Use QuickSight as the working view</li>
+<li>Use Redshift for the larger data setup</li>
+<li>Keep related actions connected</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="synthesis">
+<div class="container synthesis-grid">
+<div class="synthesis-label">Project takeaway</div>
+<div>
+<h2>I started small, proved what worked, <span>then helped scale it.</span></h2>
+<p>The first version helped me understand what users actually needed. That gave the team a clear model to carry into Redshift and QuickSight without changing the core workflow.</p>
+<div class="loop">
+<div class="loop-node"><small>Collect</small><strong>Bring audit data together</strong></div>
+<div class="loop-arrow">→</div>
+<div class="loop-node"><small>Connect</small><strong>Link findings and follow up</strong></div>
+<div class="loop-arrow">→</div>
+<div class="loop-node"><small>Use</small><strong>See what needs action</strong></div>
+<div class="loop-arrow">→</div>
+<div class="loop-node"><small>Keep</small><strong>Carry history forward</strong></div>
+</div>
+</div>
+</div>
+</section>
+<section class="next">
+
+  <div class="container next-inner">
+
+    <div>
+
+      <small>
+        Next / Personal Projects
+      </small>
+
+      <h2>
+        See what I build independently.
+      </h2>
+
+    </div>
+
+    <a href="../../projects.html#personal">
+      Explore personal projects →
+    </a>
+
+  </div>
+
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div>Data Operations Technology</div>
+<div>Amazon EMEA Food Safety Operations</div>
+</div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

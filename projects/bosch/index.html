@@ -1,0 +1,251 @@
+html
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bosch Billing Intelligence Platform</title>
+<meta content="Technical case study of a billing platform connecting data, controlled corrections, invoicing and reporting." name="description"/>
+<link href="../../assets/css/pages/bosch.css" rel="stylesheet"/>
+<link href="../../assets/css/responsive.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+<div class="nav-inner">
+<a class="logo" href="../../index.html">Venkat</a>
+<div class="nav-links">
+<a href="../../index.html">About</a><a href="../../experience.html">Experience</a>
+<a class="active" href="../index.html">Projects</a><a href="../../contact.html">Contact</a>
+<a class="ask-ai-nav" href="../../ask-ai/">Ask AI</a></div>
+</div>
+</nav>
+<main>
+<section class="container hero">
+<a class="back" href="../index.html">← Back to projects</a>
+<div class="eyebrow">03 / Professional Project Bosch</div>
+<h1>Billing Intelligence <span>Platform</span></h1>
+<p class="tagline">I led the design and build of a billing platform that connected source data, user corrections, invoicing and reporting in one workflow.</p>
+<div class="hero-grid">
+<div>
+<div class="meta-label">Role</div>
+<div class="meta-value">Business Intelligence Intern</div>
+</div>
+<div>
+<p class="hero-copy">I owned the implementation from data preparation to the application workflow. I connected the source systems, built the billing logic, defined what users could correct, and made sure approved changes flowed back into invoicing and reporting.</p>
+<div class="tags">
+<span class="tag">MongoDB</span><span class="tag">Azure SQL</span><span class="tag">Power Query</span>
+<span class="tag">Power BI</span><span class="tag">Dataverse</span><span class="tag">Power Apps</span>
+<span class="tag">Billing Automation</span>
+</div>
+</div>
+</div>
+<div class="nda">
+<strong>Confidentiality</strong>
+<p>System details and business data are anonymized. The workflow and project story reflect the work I completed.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">01 / Problem</div>
+<div>
+<h2>I started with a billing process that depended too much on manual work.</h2>
+<p class="section-copy">Teams had to bring together usage data, apply billing rules, investigate differences, correct records and prepare invoices. A lot of that work depended on spreadsheets and individual knowledge.</p>
+</div>
+</div>
+<div class="story-grid">
+<div class="story-card">
+<small>The problem</small>
+<h3>The same billing work had to be checked and repeated manually.</h3>
+<p>That made the process harder to keep consistent across teams and business units.</p>
+</div>
+<div class="story-card dark">
+<small>My decision</small>
+<h3>Let users fix defined billing issues without giving them access to everything.</h3>
+<p>I built the workflow so approved fields could be corrected while the rest of the data stayed protected.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">02 / Platform design</div>
+<div>
+<h2>I connected the billing steps instead of treating them as separate tools.</h2>
+<p class="section-copy">Source data came from MongoDB and Azure SQL, Power Query prepared it, Dataverse stored the working billing records, Power Apps handled user corrections, and Power BI showed the result.</p>
+</div>
+</div>
+<div class="pipeline">
+<div class="pipe-row">
+<div class="node"><small>Source</small><strong>MongoDB + Azure SQL</strong></div>
+<div class="arrow"></div>
+<div class="node"><small>Prepare</small><strong>Power Query</strong></div>
+<div class="arrow"></div>
+<div class="node primary"><small>Store</small><strong>Dataverse</strong></div>
+<div class="arrow"></div>
+<div class="node"><small>Correct</small><strong>Power Apps</strong></div>
+<div class="arrow"></div>
+<div class="node"><small>Report</small><strong>Power BI</strong></div>
+</div>
+<p class="scale-line"><strong>Corrections:</strong> Approved changes were stored in Dataverse and used by the billing and reporting flow.</p>
+<p class="scale-line"><strong>Use:</strong> The application was used across multiple business units instead of separate billing files.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">03 / Data control</div>
+<div>
+<h2>I controlled what users could change and what had to stay protected.</h2>
+<p class="section-copy">Business users could correct known billing issues directly in the application, but only through approved fields and checks. The corrected record stayed in Dataverse and continued through the same billing flow.</p>
+</div>
+</div>
+<div class="gov-grid">
+<div class="panel">
+<h3>Controls I built</h3>
+<div class="rules">
+<div class="rule"><strong>Editable fields</strong><span>Only approved billing fields could be changed.</span></div>
+<div class="rule"><strong>Checks</strong><span>Required values and billing rules were checked before saving.</span></div>
+<div class="rule"><strong>Stored changes</strong><span>Corrections were saved in Dataverse instead of separate user files.</span></div>
+<div class="rule"><strong>Change history</strong><span>Changes could be followed through the correction and billing process.</span></div>
+<div class="rule"><strong>Reporting</strong><span>Updated values returned to planned versus actual reporting.</span></div>
+</div>
+</div>
+<div class="writeback-card">
+<div>
+<small>Key idea</small>
+<h3>The corrected record stayed connected to billing and reporting.</h3>
+<p>Users did not need separate correction files. The approved change stayed in the same data flow used for invoice preparation and reporting.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">04 / What I built</div>
+<div>
+<h2>I owned the work across the data, application and billing flow.</h2>
+<p class="section-copy">I translated the billing process into system rules, connected the tools, built the correction workflow and decided which changes users could make themselves.</p>
+</div>
+</div>
+<div class="role-grid">
+<div class="role-card">
+<small>01</small>
+<h3>Built the billing logic</h3>
+<p>I mapped the source data and billing rules into a structure that supported correction, invoicing and reporting.</p>
+</div>
+<div class="role-card">
+<small>02</small>
+<h3>Connected the data flow</h3>
+<p>I connected MongoDB, Azure SQL, Power Query, Dataverse, Power Apps and Power BI.</p>
+</div>
+<div class="role-card">
+<small>03</small>
+<h3>Built user corrections</h3>
+<p>I defined which fields could be edited, added checks and stored approved changes in Dataverse.</p>
+</div>
+<div class="role-card">
+<small>04</small>
+<h3>Closed the reporting loop</h3>
+<p>I sent the corrected billing state back into planned versus actual reporting.</p>
+</div>
+</div>
+<div class="decision-box">
+<small>Key decision</small>
+<p>I did not give users open access to every field. Only billing fields that could be safely corrected were editable. Other changes stayed with the analyst team.</p>
+<p>This kept the application useful for the business while protecting the data used for invoicing.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">05 / Billing flow</div>
+<div>
+<h2>I connected the full path from finding a billing issue to confirming the final result.</h2>
+<p class="section-copy">A user could find a difference in reporting, review the record, correct an approved field, continue the billing process and then see the updated result in reporting.</p>
+</div>
+</div>
+<div class="workflow">
+<h3>How the workflow worked</h3>
+<div class="steps">
+<div class="step"><div class="step-no">1</div><div><strong>Find</strong><p>Planned versus actual reporting showed a billing difference.</p></div></div>
+<div class="step"><div class="step-no">2</div><div><strong>Review</strong><p>The user checked the record and the billing details behind it.</p></div></div>
+<div class="step"><div class="step-no">3</div><div><strong>Correct</strong><p>Approved fields were changed in Power Apps and saved to Dataverse.</p></div></div>
+<div class="step"><div class="step-no">4</div><div><strong>Invoice</strong><p>The corrected record continued into the invoice process.</p></div></div>
+<div class="step"><div class="step-no">5</div><div><strong>Confirm</strong><p>The final billing state returned to planned versus actual reporting.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="section-index">06 / Outcome</div>
+<div>
+<h2>I moved billing from separate manual steps into one connected workflow.</h2>
+<p class="section-copy">The platform gave teams one path from source data to correction, invoicing and reporting. Defined billing issues could be handled in the application while the underlying data stayed controlled.</p>
+</div>
+</div>
+<div class="before-after">
+<div class="ba">
+<small>Before</small>
+<h3>Billing depended on manual checks and separate files.</h3>
+<ul>
+<li>Repeated manual reconciliation</li>
+<li>Knowledge held by individual users</li>
+<li>Corrections handled outside the main data flow</li>
+<li>Repeated handoffs between analysts and business users</li>
+<li>Harder to follow a billing issue through to the invoice</li>
+</ul>
+</div>
+<div class="ba">
+<small>After</small>
+<h3>The platform connected the repeatable billing work.</h3>
+<ul>
+<li>One consistent data preparation flow</li>
+<li>Controlled corrections through Dataverse and Power Apps</li>
+<li>Corrected records connected to invoicing</li>
+<li>Business users handled defined issues directly</li>
+<li>Reporting reflected the final billing state</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="synthesis">
+<div class="container synthesis-grid">
+<div class="synthesis-label">Project takeaway</div>
+<div>
+<h2>The value was not another dashboard. <span>It was connecting reporting to action.</span></h2>
+<p>I built the platform so a billing issue could be found, corrected, used for invoicing and checked again without moving the record into separate files.</p>
+<div class="loop">
+<div class="loop-node"><small>Find</small><strong>See billing difference</strong></div>
+<div class="loop-arrow">→</div>
+<div class="loop-node"><small>Correct</small><strong>Update approved fields</strong></div>
+<div class="loop-arrow">→</div>
+<div class="loop-node"><small>Invoice</small><strong>Use corrected record</strong></div>
+<div class="loop-arrow">→</div>
+<div class="loop-node"><small>Confirm</small><strong>See final billing state</strong></div>
+</div>
+</div>
+</div>
+</section>
+<section class="next">
+<div class="container next-inner">
+<div>
+<small>07 / Next project</small>
+<h2>EMEA Food Safety Audit Intelligence Platform</h2>
+</div>
+<a href="../amazon/index.html">Explore Amazon →</a>
+</div>
+</section>
+</main>
+<footer id="contact"><div class="container footer-inner"><div>Data Operations Technology</div><div>Bosch Business Intelligence</div></div></footer>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

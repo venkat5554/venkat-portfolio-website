@@ -1,0 +1,1172 @@
+/* ==========================================
+   ROOT VARIABLES
+=========================================== */
+
+:root {
+  --bg: #f5f4ef;
+  --text: #171717;
+  --muted: #70706b;
+  --line: #d7d6cf;
+  --accent: #315c52;
+  --white: #ffffff;
+  --linkedin: #0a66c2;
+  --github: #181717;
+}
+
+
+/* ==========================================
+   RESET
+=========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ==========================================
+   GENERAL CONTAINER
+=========================================== */
+
+.container {
+  width: min(1280px, calc(100% - 72px));
+  margin-inline: auto;
+}
+
+
+/* ==========================================
+   NAVIGATION
+=========================================== */
+
+.site-nav {
+  position: relative;
+  z-index: 1000;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.nav-inner {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ==========================================
+   LOGO
+=========================================== */
+
+.logo {
+  position: relative;
+  z-index: 1002;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.65;
+}
+
+
+/* ==========================================
+   DESKTOP NAVIGATION
+=========================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 38px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+.nav-links a {
+  position: relative;
+
+  padding: 4px 0;
+
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-links a.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--accent);
+}
+
+
+/* ==========================================
+   HAMBURGER
+=========================================== */
+
+.menu-toggle {
+  display: none;
+
+  position: relative;
+  z-index: 1002;
+
+  width: 32px;
+  height: 26px;
+
+  padding: 2px 0;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--text);
+
+  transform-origin: center;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease;
+}
+
+.menu-toggle span + span {
+  margin-top: 6px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ==========================================
+   HERO
+=========================================== */
+
+.hero {
+  max-width: none;
+
+  padding: 60px 0 56px;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.hero h1 {
+  max-width: 930px;
+
+  font-size: clamp(52px, 6.2vw, 82px);
+  font-weight: 500;
+
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+
+/*
+   Only highlight spans inside the hero heading.
+
+   Do not use:
+   .hero span
+
+   because it can affect buttons or other
+   span elements added inside the hero later.
+*/
+
+.hero h1 span {
+  display: block;
+
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.hero-description {
+  max-width: 650px;
+
+  margin-top: 28px;
+
+  color: #44443f;
+
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+
+/* ==========================================
+   INTRO
+=========================================== */
+
+.intro {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 760px);
+
+  gap: 70px;
+
+  padding: 58px 0 64px;
+
+  border-top: 1px solid var(--line);
+}
+
+.section-label {
+  color: var(--muted);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.intro-text {
+  max-width: 760px;
+
+  font-size: 25px;
+
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+
+/* ==========================================
+   FRAMEWORK
+=========================================== */
+
+.framework {
+  padding: 62px 0 68px;
+
+  border-top: 1px solid var(--line);
+}
+
+.framework-title {
+  max-width: 800px;
+
+  margin-bottom: 36px;
+
+  font-size: 40px;
+  font-weight: 500;
+
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--line);
+}
+
+.step {
+  min-height: 210px;
+
+  padding: 24px 25px 18px 0;
+
+  border-right: 1px solid var(--line);
+}
+
+.step:not(:first-child) {
+  padding-left: 25px;
+}
+
+.step:last-child {
+  padding-right: 0;
+
+  border-right: 0;
+}
+
+.step-number {
+  margin-bottom: 26px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.step h3 {
+  margin-bottom: 12px;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.step p {
+  max-width: 245px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   THINKING
+=========================================== */
+
+.thinking {
+  padding: 70px 0 72px;
+
+  background: var(--text);
+  color: var(--white);
+}
+
+.thinking-grid {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 900px);
+
+  gap: 70px;
+}
+
+.thinking .section-label {
+  color: #aaaaaa;
+}
+
+.thinking-quote {
+  max-width: 850px;
+
+  border: 0;
+
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.thinking-copy {
+  max-width: 600px;
+
+  margin-top: 30px;
+
+  color: #aaaaaa;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* ==========================================
+   EXPERIENCE
+=========================================== */
+
+.experience {
+  padding: 64px 0 68px;
+}
+
+.experience-header {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 760px);
+
+  gap: 70px;
+
+  margin-bottom: 36px;
+}
+
+.experience h2 {
+  max-width: 650px;
+
+  font-size: 40px;
+  font-weight: 500;
+
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.experience-intro {
+  max-width: 600px;
+
+  margin-top: 16px;
+
+  color: #55554f;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   COMPANY LIST
+=========================================== */
+
+.companies {
+  border-top: 1px solid var(--line);
+}
+
+.company {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 1fr;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    padding-left 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.company:hover {
+  padding-left: 7px;
+}
+
+.company-name {
+  font-size: 21px;
+  font-weight: 500;
+
+  letter-spacing: -0.025em;
+}
+
+.company-role {
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.company-type {
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-align: right;
+}
+
+
+/* ==========================================
+   METRICS
+=========================================== */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+
+  padding: 50px 0 56px;
+
+  border-top: 1px solid var(--line);
+}
+
+.metric {
+  min-width: 0;
+}
+
+.metric-number {
+  font-size: 46px;
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.metric-label {
+  max-width: 220px;
+
+  margin-top: 9px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   PHILOSOPHY
+=========================================== */
+
+.philosophy {
+  padding: 70px 0 76px;
+
+  border-top: 1px solid var(--line);
+}
+
+.philosophy p {
+  max-width: 950px;
+
+  font-size: clamp(38px, 4.8vw, 62px);
+
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.philosophy strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+
+/* ==========================================
+   FOOTER
+=========================================== */
+
+footer {
+  padding: 24px 0;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-positioning {
+  letter-spacing: 0.01em;
+}
+
+
+/* ==========================================
+   SOCIAL LINKS
+=========================================== */
+
+.social-links {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  color: var(--muted);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+}
+
+
+/* LinkedIn */
+
+.linkedin-link:hover,
+.linkedin-link:focus-visible {
+  background: var(--linkedin);
+  color: var(--white);
+
+  transform: translateY(-2px);
+}
+
+
+/* GitHub */
+
+.github-link:hover,
+.github-link:focus-visible {
+  background: var(--github);
+  color: var(--white);
+
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   FOCUS ACCESSIBILITY
+=========================================== */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+
+/* ==========================================
+   TABLET
+=========================================== */
+
+@media (max-width: 900px) {
+
+  .container {
+    width: min(760px, calc(100% - 40px));
+  }
+
+
+  /* HERO */
+
+  .hero {
+    padding: 54px 0 50px;
+  }
+
+  .hero h1 {
+    max-width: 760px;
+
+    font-size: clamp(48px, 9vw, 68px);
+  }
+
+  .hero-description {
+    max-width: 600px;
+
+    font-size: 17px;
+  }
+
+
+  /* INTRO */
+
+  .intro {
+    grid-template-columns: 180px minmax(0, 1fr);
+
+    gap: 45px;
+
+    padding: 50px 0 56px;
+  }
+
+  .intro-text {
+    font-size: 22px;
+  }
+
+
+  /* FRAMEWORK */
+
+  .framework {
+    padding: 54px 0 58px;
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step {
+    min-height: 190px;
+
+    padding: 25px 24px;
+  }
+
+  .step:not(:first-child) {
+    padding-left: 24px;
+  }
+
+  .step:nth-child(2) {
+    border-right: 0;
+  }
+
+  .step:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .step:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .step-number {
+    margin-bottom: 20px;
+  }
+
+
+  /* THINKING */
+
+  .thinking {
+    padding: 60px 0;
+  }
+
+  .thinking-grid {
+    grid-template-columns: 180px minmax(0, 1fr);
+
+    gap: 45px;
+  }
+
+
+  /* EXPERIENCE */
+
+  .experience {
+    padding: 56px 0 60px;
+  }
+
+  .experience-header {
+    grid-template-columns: 180px minmax(0, 1fr);
+
+    gap: 45px;
+
+    margin-bottom: 32px;
+  }
+
+  .experience h2 {
+    font-size: 36px;
+  }
+
+
+  /* COMPANIES */
+
+  .company {
+    grid-template-columns: 0.8fr 1.5fr 1fr;
+
+    gap: 20px;
+  }
+
+
+  /* PHILOSOPHY */
+
+  .philosophy {
+    padding: 60px 0 64px;
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+=========================================== */
+
+@media (max-width: 700px) {
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+
+  /* ==========================================
+     NAVIGATION
+  =========================================== */
+
+  .site-nav {
+    padding: 18px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1001;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    background: var(--bg);
+
+    font-size: 22px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+
+  .nav-links a.active::after {
+    bottom: -6px;
+  }
+
+
+  /* ==========================================
+     HERO
+  =========================================== */
+
+  .hero {
+    padding: 44px 0 44px;
+  }
+
+  .eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+
+    font-size: clamp(42px, 13vw, 58px);
+
+    line-height: 0.98;
+  }
+
+  .hero-description {
+    max-width: 100%;
+
+    margin-top: 22px;
+
+    font-size: 16px;
+  }
+
+
+  /* ==========================================
+     INTRO
+  =========================================== */
+
+  .intro {
+    display: block;
+
+    padding: 44px 0 48px;
+  }
+
+  .intro .section-label {
+    margin-bottom: 24px;
+  }
+
+  .intro-text {
+    max-width: 100%;
+
+    font-size: 20px;
+  }
+
+
+  /* ==========================================
+     FRAMEWORK
+  =========================================== */
+
+  .framework {
+    padding: 46px 0 50px;
+  }
+
+  .framework-title {
+    margin-bottom: 28px;
+
+    font-size: 34px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .step,
+  .step:not(:first-child) {
+    min-height: auto;
+
+    padding: 24px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .step:last-child {
+    border-bottom: 0;
+  }
+
+  .step-number {
+    margin-bottom: 15px;
+  }
+
+  .step h3 {
+    font-size: 21px;
+  }
+
+  .step p {
+    max-width: 450px;
+  }
+
+
+  /* ==========================================
+     THINKING
+  =========================================== */
+
+  .thinking {
+    padding: 48px 0 52px;
+  }
+
+  .thinking-grid {
+    display: block;
+  }
+
+  .thinking .section-label {
+    margin-bottom: 28px;
+  }
+
+  .thinking-quote {
+    max-width: 100%;
+
+    font-size: clamp(32px, 9vw, 44px);
+  }
+
+  .thinking-copy {
+    margin-top: 26px;
+
+    font-size: 15px;
+  }
+
+
+  /* ==========================================
+     EXPERIENCE
+  =========================================== */
+
+  .experience {
+    padding: 48px 0 52px;
+  }
+
+  .experience-header {
+    display: block;
+
+    margin-bottom: 30px;
+  }
+
+  .experience-header .section-label {
+    margin-bottom: 22px;
+  }
+
+  .experience h2 {
+    max-width: 100%;
+
+    font-size: 34px;
+  }
+
+  .experience-intro {
+    margin-top: 14px;
+
+    font-size: 16px;
+  }
+
+
+  /* ==========================================
+     COMPANY LIST
+  =========================================== */
+
+  .company {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 4px;
+
+    padding: 20px 0;
+  }
+
+  .company:hover {
+    padding-left: 0;
+  }
+
+  .company-name {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+  }
+
+  .company-role {
+    font-size: 14px;
+  }
+
+  .company-type {
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    text-align: left;
+  }
+
+
+  /* ==========================================
+     METRICS
+  =========================================== */
+
+  .metrics {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    padding: 0;
+  }
+
+  .metric {
+    padding: 28px 0;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .metric:last-child {
+    border-bottom: 0;
+  }
+
+  .metric-number {
+    font-size: 44px;
+  }
+
+
+  /* ==========================================
+     PHILOSOPHY
+  =========================================== */
+
+  .philosophy {
+    padding: 52px 0 56px;
+  }
+
+  .philosophy p {
+    max-width: 100%;
+
+    font-size: clamp(36px, 10vw, 50px);
+  }
+
+
+  /* ==========================================
+     FOOTER
+  =========================================== */
+
+  footer {
+    padding: 22px 0;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+=========================================== */
+
+@media (max-width: 420px) {
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 12.5vw, 50px);
+  }
+
+  .intro-text {
+    font-size: 19px;
+  }
+
+  .framework-title,
+  .experience h2 {
+    font-size: 31px;
+  }
+
+  .thinking-quote {
+    font-size: 31px;
+  }
+
+  .metric-number {
+    font-size: 40px;
+  }
+}

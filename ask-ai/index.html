@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Ask Venkat — AI portfolio assistant for Venkateswara Reddy Pochana." name="description"/>
+<title>Ask Venkat</title>
+<link href="../assets/css/pages/ask-ai.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- ==========================================
+       NAVIGATION
+  =========================================== -->
+<nav class="site-nav">
+<div class="container nav-inner">
+<a aria-label="Venkat home" class="logo" href="../index.html">
+        Venkat
+      </a>
+<div class="nav-links" id="navLinks">
+<a href="../index.html">
+          About
+        </a>
+<a href="../experience.html">
+          Experience
+        </a>
+<a href="../projects/">
+          Projects
+        </a>
+<a href="../contact.html">
+          Contact
+        </a>
+<a aria-current="page" class="active ask-ai-nav" href="./">
+          Ask AI
+        </a>
+</div>
+<button aria-controls="navLinks" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</nav>
+<!-- ==========================================
+       MAIN
+  =========================================== -->
+<main>
+<!-- ==========================================
+         HERO
+    =========================================== -->
+<section class="container ai-hero">
+<div class="eyebrow">
+        AI Assistant
+      </div>
+<h1>
+        Curious about my work?
+        <span>Just ask.</span>
+</h1>
+<p class="ai-hero-description">
+        Ask me about my experience, projects, skills,
+        or the technologies I’ve worked with.
+      </p>
+</section>
+<!-- ==========================================
+         SUGGESTED QUESTIONS
+    =========================================== -->
+<section class="container">
+<div class="ai-intro">
+<div class="section-label">
+          Try a question
+        </div>
+<div class="suggested-questions">
+<button class="suggestion-btn" data-question="What did you work on at ZEISS?" type="button">
+            What did you work on at ZEISS?
+          </button>
+<button class="suggestion-btn" data-question="Tell me about your data engineering experience." type="button">
+            Tell me about your data engineering experience.
+          </button>
+<button class="suggestion-btn" data-question="What technologies do you work with?" type="button">
+            What technologies do you work with?
+          </button>
+</div>
+</div>
+</section>
+<!-- ==========================================
+         CHAT
+    =========================================== -->
+<section class="container chat-shell">
+<!-- Chat header -->
+<div class="chat-header">
+<div>
+<div class="section-label">
+            Ask Venkat
+          </div>
+<p class="chat-status">
+            AI portfolio assistant
+          </p>
+</div>
+<button class="new-chat-btn" id="newChatBtn" type="button">
+          New chat
+
+          <span aria-hidden="true">
+            ↗
+          </span>
+</button>
+</div>
+<!-- Conversation -->
+<div aria-live="polite" class="chat" id="chat">
+<div class="message assistant-message">
+<div class="message-label">
+            Venkat AI
+          </div>
+<div class="message-content">
+<p>
+              Hi! Ask me anything about my professional
+              experience, skills, education, technologies,
+              or the work I've done.
+            </p>
+</div>
+</div>
+</div>
+<!-- Composer is NOW ATTACHED to conversation -->
+<div class="chat-composer-area">
+<form class="primary-composer" id="chatForm">
+<label class="sr-only" for="messageInput">
+            Ask Venkat a question
+          </label>
+<textarea autocomplete="off" id="messageInput" maxlength="4000" placeholder="Ask me anything about my work..." rows="1"></textarea>
+<button aria-label="Send question" class="chat-send" id="sendBtn" type="submit">
+<span>
+              Ask
+            </span>
+<span aria-hidden="true">
+              →
+            </span>
+</button>
+</form>
+<p class="ask-hint">
+          Ask about a company, role, technology, skill, or experience.
+        </p>
+</div>
+</section>
+</main>
+<!-- ==========================================
+       FOOTER
+  =========================================== -->
+<footer>
+<div class="container footer-inner">
+<div>
+        Data · Operations · Technology
+      </div>
+<div class="footer-status">
+<span aria-hidden="true" class="status-dot"></span>
+
+        AI portfolio assistant
+
+      </div>
+</div>
+</footer>
+<!-- ==========================================
+       JAVASCRIPT
+  =========================================== -->
+
+<script src="../assets/js/ask-ai-config.js"></script><script src="../assets/js/ask-ai.js"></script></body>
+</html>

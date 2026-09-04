@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Ask Venkat — AI Portfolio Assistant</title>
+
+  <meta
+    name="description"
+    content="Ask Venkat — a retrieval-powered AI portfolio assistant built with Cloudflare Workers, Vectorize, Workers AI and Groq."
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="../../assets/icons/favicon.png"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../../assets/css/pages/ask-venkat-project.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../../assets/css/responsive.css"
+  />
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION
+=========================================== -->
+
+<nav class="site-nav">
+
+  <div class="container nav-inner">
+
+    <a
+      href="../../index.html"
+      class="logo"
+      aria-label="Venkat home"
+    >
+      Venkat
+    </a>
+
+    <div
+      class="nav-links"
+      id="navLinks"
+    >
+
+      <a href="../../index.html">
+        About
+      </a>
+
+      <a href="../../experience.html">
+        Experience
+      </a>
+
+      <a
+        href="../../projects.html"
+        class="active"
+        aria-current="page"
+      >
+        Projects
+      </a>
+
+      <a href="../../contact.html">
+        Contact
+      </a>
+
+      <a href="../../ask-ai/">
+        Ask AI
+      </a>
+
+    </div>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+</nav>
+
+
+
+<main>
+
+
+  <!-- ==========================================
+       HERO
+  =========================================== -->
+
+  <section class="container hero">
+
+    <div class="eyebrow">
+      Independent build / 01
+    </div>
+
+    <h1>
+      Ask Venkat
+      <span>AI Portfolio Assistant</span>
+    </h1>
+
+    <p class="hero-description">
+      A retrieval-powered AI assistant built around my professional
+      experience, projects and technical background — designed to let
+      visitors explore my portfolio through conversation.
+    </p>
+
+    <div class="hero-actions">
+
+      <a
+        href="../../ask-ai/"
+        class="primary-action"
+      >
+        Try it live →
+      </a>
+
+      <a
+        href="https://github.com/venkat5554"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="secondary-action"
+      >
+        View GitHub ↗
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       PROJECT OVERVIEW
+  =========================================== -->
+
+  <section class="section">
+
+    <div class="container section-grid">
+
+      <div class="section-label">
+        Project overview
+      </div>
+
+      <div class="section-content">
+
+        <p class="lead">
+          Traditional portfolio websites are static.
+          Visitors have to navigate through multiple pages to understand
+          experience, projects, skills and technical depth.
+        </p>
+
+        <p>
+          Ask Venkat adds a conversational layer to the portfolio.
+          Instead of searching manually, a visitor can ask a question
+          and receive an answer grounded in curated information about
+          my professional background.
+        </p>
+
+        <p>
+          The project combines a lightweight frontend, a Cloudflare Worker
+          API, semantic retrieval through vector search and a language model
+          that generates the final response using retrieved portfolio context.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       PROBLEM
+  =========================================== -->
+
+  <section class="section section-alt">
+
+    <div class="container section-grid">
+
+      <div class="section-label">
+        01 / Problem
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Make a portfolio easier to explore.
+        </h2>
+
+        <p>
+          A portfolio contains useful information, but it still depends on
+          the visitor knowing where to look.
+        </p>
+
+        <p>
+          I wanted to experiment with a different interaction model:
+          allow someone to ask direct questions such as what kind of
+          problems I have worked on, what technologies I use, or what
+          experience I have in a particular area.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       SOLUTION
+  =========================================== -->
+
+  <section class="section">
+
+    <div class="container section-grid">
+
+      <div class="section-label">
+        02 / Solution
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Retrieval before generation.
+        </h2>
+
+        <p>
+          Ask Venkat does not rely on a language model alone.
+          Before generating an answer, the application searches a curated
+          knowledge base containing information about my profile,
+          employers, projects, education and skills.
+        </p>
+
+        <p>
+          The most relevant pieces of information are retrieved and passed
+          to the model as context. This keeps the experience focused on the
+          portfolio rather than turning it into a general-purpose chatbot.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       ARCHITECTURE
+  =========================================== -->
+
+  <section class="section section-dark">
+
+    <div class="container">
+
+      <div class="architecture-heading">
+
+        <div class="section-label">
+          03 / Architecture
+        </div>
+
+        <h2>
+          From question to grounded answer.
+        </h2>
+
+      </div>
+
+
+      <div class="architecture-flow">
+
+        <div class="architecture-step">
+          <span>01</span>
+          <strong>User question</strong>
+          <small>Portfolio interface</small>
+        </div>
+
+        <div class="architecture-arrow">
+          →
+        </div>
+
+        <div class="architecture-step">
+          <span>02</span>
+          <strong>Worker API</strong>
+          <small>Cloudflare Worker</small>
+        </div>
+
+        <div class="architecture-arrow">
+          →
+        </div>
+
+        <div class="architecture-step">
+          <span>03</span>
+          <strong>Embeddings</strong>
+          <small>Workers AI</small>
+        </div>
+
+        <div class="architecture-arrow">
+          →
+        </div>
+
+        <div class="architecture-step">
+          <span>04</span>
+          <strong>Vector search</strong>
+          <small>Cloudflare Vectorize</small>
+        </div>
+
+        <div class="architecture-arrow">
+          →
+        </div>
+
+        <div class="architecture-step">
+          <span>05</span>
+          <strong>LLM response</strong>
+          <small>Groq API</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       TECH STACK
+  =========================================== -->
+
+  <section class="section">
+
+    <div class="container section-grid">
+
+      <div class="section-label">
+        04 / Technology
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Lightweight frontend.
+          Modular AI backend.
+        </h2>
+
+        <div class="tech-grid">
+
+          <div class="tech-item">
+            <span>Frontend</span>
+            <strong>HTML · CSS · JavaScript</strong>
+          </div>
+
+          <div class="tech-item">
+            <span>API</span>
+            <strong>Cloudflare Workers · Python</strong>
+          </div>
+
+          <div class="tech-item">
+            <span>Embeddings</span>
+            <strong>Workers AI</strong>
+          </div>
+
+          <div class="tech-item">
+            <span>Retrieval</span>
+            <strong>Cloudflare Vectorize</strong>
+          </div>
+
+          <div class="tech-item">
+            <span>Language model</span>
+            <strong>Groq API</strong>
+          </div>
+
+          <div class="tech-item">
+            <span>Deployment</span>
+            <strong>Cloudflare Pages + Workers</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       DESIGN DECISIONS
+  =========================================== -->
+
+  <section class="section section-alt">
+
+    <div class="container section-grid">
+
+      <div class="section-label">
+        05 / Decisions
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Keep each part independent.
+        </h2>
+
+        <div class="decision-list">
+
+          <div class="decision">
+            <span>01</span>
+            <p>
+              Keep the AI backend separate from the static portfolio
+              so both can evolve independently.
+            </p>
+          </div>
+
+          <div class="decision">
+            <span>02</span>
+            <p>
+              Retrieve relevant portfolio information before asking
+              the language model to generate an answer.
+            </p>
+          </div>
+
+          <div class="decision">
+            <span>03</span>
+            <p>
+              Keep the knowledge base curated rather than allowing the
+              assistant to answer unrestricted questions.
+            </p>
+          </div>
+
+          <div class="decision">
+            <span>04</span>
+            <p>
+              Keep the user interface visually consistent with the rest
+              of the portfolio instead of building a separate chatbot product.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       LEARNING
+  =========================================== -->
+
+  <section class="section">
+
+    <div class="container section-grid">
+
+      <div class="section-label">
+        06 / Learning
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Building the full retrieval loop.
+        </h2>
+
+        <p class="lead">
+          This project gave me a practical way to connect embeddings,
+          vector search, retrieval and language models inside one
+          end-to-end application.
+        </p>
+
+        <p>
+          It also reinforced an architectural principle I value:
+          content, retrieval, API logic and presentation should remain
+          modular enough to improve independently.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       CLOSING CTA
+  =========================================== -->
+
+  <section class="project-cta">
+
+    <div class="container project-cta-grid">
+
+      <div class="section-label">
+        Explore
+      </div>
+
+      <div>
+
+        <h2>
+          Want to see it working?
+        </h2>
+
+        <p>
+          Ask a question about my experience, projects or technical background.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            href="../../ask-ai/"
+            class="primary-action"
+          >
+            Try Ask Venkat →
+          </a>
+
+          <a
+            href="../../projects.html"
+            class="secondary-action"
+          >
+            Back to Projects →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div class="footer-positioning">
+      Data · Operations · Technology
+    </div>
+
+    <div class="footer-links">
+
+      <a href="../../projects.html">
+        Projects
+      </a>
+
+      <a href="../../contact.html">
+        Contact
+      </a>
+
+      <a href="../../ask-ai/">
+        Ask AI
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
