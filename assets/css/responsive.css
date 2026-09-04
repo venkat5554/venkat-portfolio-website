@@ -12,224 +12,927 @@
     width: min(calc(100% - 32px), 760px);
   }
 
-
-
-
-  /* ========================================
-     ABOUT PAGE
-  ======================================== */
-
-  .hero {
-    padding: 80px 0;
+  .about-page .container {
+    width: min(760px, calc(100% - 40px));
   }
 
-  .hero h1 {
-    font-size: clamp(50px, 15vw, 78px);
-  }
-
-  .hero-description {
-    margin-top: 35px;
-    font-size: 18px;
-  }
-
-  .intro {
-    grid-template-columns: 1fr;
-    gap: 35px;
-
-    padding: 70px 0;
-  }
-
-  .intro-text {
-    font-size: 25px;
-  }
-
-  .framework {
-    padding: 80px 0;
-  }
-
-  .framework-title {
-    margin-bottom: 50px;
-    font-size: 42px;
-  }
-
-  .steps {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .step {
-    margin: 0;
-
-    padding: 30px 25px 35px 0;
-
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .step:nth-child(odd) {
-    padding-right: 25px;
-    border-right: 1px solid var(--line);
-  }
-
-  .step:nth-child(even) {
-    padding-left: 25px;
-  }
-
-  .step-number {
-    margin-bottom: 35px;
-  }
-
-  .step p {
-    max-width: none;
-  }
-
-  .thinking {
-    padding: 90px 0;
-  }
-
-  .thinking-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .thinking-copy {
-    margin-top: 35px;
-  }
-
-  .experience {
-    padding: 85px 0;
-  }
-
-  .experience-header {
-    grid-template-columns: 1fr;
-    gap: 35px;
-
-    margin-bottom: 55px;
-  }
-
-  .experience h2 {
-    font-size: 43px;
-  }
-
-  .company-type {
-    text-align: left;
-  }
-
-  .metrics {
-    grid-template-columns: 1fr;
-    gap: 45px;
-
-    padding: 70px 0;
-  }
-
-  .philosophy {
-    padding: 90px 0;
-  }
-
+  /* About page responsive rules live in index.css. */
 
   /* ========================================
      EXPERIENCE PAGE
+     Tightened specifically for the long Experience page.
   ======================================== */
 
-  .career-strip-grid {
+  .experience-page .hero {
+    padding: 48px 0 44px;
+  }
+
+  .experience-page .eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .experience-page .hero h1 {
+    max-width: 760px;
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .experience-page .hero-description {
+    max-width: 600px;
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .experience-page .resume-actions {
+    margin-top: 22px;
+  }
+
+  .experience-page .career-strip-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .career-strip-item:nth-child(2) {
+  .experience-page .career-strip-item,
+  .experience-page .career-strip-item:not(:first-child) {
+    min-height: 96px;
+    padding: 20px 22px;
+  }
+
+  .experience-page .career-strip-item:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .experience-page .career-strip-item:nth-child(2) {
     border-right: 0;
   }
 
-  .career-strip-item:nth-child(-n+2) {
+  .experience-page .career-strip-item:nth-child(-n+2) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
   }
 
-  .career-strip-item:nth-child(3) {
+  .experience-page .career-strip-item:nth-child(3) {
     padding-left: 0;
   }
 
-  .experience-intro-grid,
-  .company-header,
-  .capabilities-header {
+  .experience-page .career-strip-label {
+    margin-bottom: 10px;
+  }
+
+  .experience-page .company {
+    padding: 48px 0 52px;
+  }
+
+  .experience-page .company-header {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 12px;
   }
 
-  .experience-intro,
-  .company,
-  .capabilities,
-  .cta {
-    padding: 85px 0;
+  .experience-page .company-name {
+    font-size: clamp(34px, 6vw, 46px);
   }
 
-  .ownership-grid {
+  .experience-page .company-meta {
+    margin-top: 14px;
+  }
+
+  .experience-page .company-focus {
+    margin-top: 16px;
+  }
+
+  .experience-page .company-summary {
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.58;
+  }
+
+  .experience-page .ownership {
+    margin-top: 34px;
+    padding-top: 22px;
+  }
+
+  .experience-page .ownership-label {
+    margin-bottom: 18px;
+  }
+
+  .experience-page .ownership-grid {
     grid-template-columns: 1fr;
   }
 
-  .ownership-item,
-  .ownership-item:not(:first-child) {
+  .experience-page .ownership-item,
+  .experience-page .ownership-item:not(:first-child) {
     min-height: auto;
-
-    padding: 30px 0;
-
+    padding: 22px 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
-  .ownership-item:last-child {
+  .experience-page .ownership-item:last-child {
     border-bottom: 0;
+    padding-bottom: 0;
   }
 
-  .ownership-number {
-    margin-bottom: 24px;
+  .experience-page .ownership-number {
+    margin-bottom: 12px;
   }
 
-  .company-outcome {
+  .experience-page .ownership-item h3 {
+    max-width: 520px;
+    margin-bottom: 9px;
+    font-size: 19px;
+  }
+
+  .experience-page .ownership-item p {
+    max-width: 620px;
+    font-size: 14px;
+  }
+
+  .experience-page .company-outcome {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 32px;
   }
 
-  .capability-grid {
+  .experience-page .outcome-card,
+  .experience-page .project-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .experience-page .impact-list {
+    margin-top: 18px;
+  }
+
+  .experience-page .project-card h3 {
+    font-size: 24px;
+  }
+
+  .experience-page .project-link {
+    margin-top: 20px;
+  }
+
+  .experience-page .cta {
+    padding: 54px 0;
+  }
+
+  .experience-page .cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .experience-page .cta h2 {
+    font-size: clamp(34px, 5vw, 46px);
+  }
+
+  /* ========================================
+     PROJECTS PAGE
+  ======================================== */
+
+  .projects-page .hero {
+    padding: 48px 0 44px;
+  }
+
+  .projects-page .hero h1 {
+    max-width: 760px;
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .projects-page .hero-copy {
+    max-width: 600px;
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .projects-page .selector-head {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 38px;
+    padding: 30px 0 24px;
+  }
+
+  .projects-page .lanes {
     grid-template-columns: 1fr 1fr;
   }
 
-  .capability:nth-child(2) {
-    border-right: 0;
+  .projects-page .lane,
+  .projects-page .lane + .lane {
+    min-height: 230px;
+    padding-top: 26px;
+    padding-bottom: 28px;
   }
 
-  .capability:nth-child(-n+2) {
-    border-bottom: 1px solid var(--line);
+  .projects-page .lane {
+    padding-right: 24px;
   }
 
-  .capability:nth-child(3) {
+  .projects-page .lane + .lane {
+    padding-left: 24px;
+  }
+
+  .projects-page .lane h2 {
+    margin-top: 22px;
+    font-size: clamp(30px, 4.8vw, 42px);
+  }
+
+  .projects-page .lane p {
+    margin-top: 12px;
+  }
+
+  .projects-page .lane .arrow {
+    margin-top: 20px;
+  }
+
+  .projects-page .collection {
+    padding: 50px 0 54px;
+  }
+
+  .projects-page .collection-head {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 38px;
+    margin-bottom: 30px;
+  }
+
+  .projects-page .collection-head h2 {
+    font-size: clamp(34px, 5vw, 48px);
+  }
+
+  .projects-page .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-page .card,
+  .projects-page .card:nth-child(even) {
+    min-height: auto;
+    padding-top: 24px;
+    padding-bottom: 26px;
+  }
+
+  .projects-page .card {
+    padding-right: 24px;
+  }
+
+  .projects-page .card:nth-child(even) {
+    padding-left: 24px;
+  }
+
+  .projects-page .card h3 {
+    font-size: 24px;
+  }
+
+  .projects-page .personal .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-page .personal .card,
+  .projects-page .personal .card:nth-child(2),
+  .projects-page .personal .card:last-child {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .projects-page .personal .card:nth-child(odd) {
     padding-left: 0;
   }
 
-  .cta-inner {
-    flex-direction: column;
-    align-items: flex-start;
+  .projects-page .personal .card:last-child {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--line);
+    border-right: 0;
   }
 
+  .projects-page .closing {
+    padding: 54px 0 58px;
+  }
+
+  .projects-page .closing h2 {
+    font-size: clamp(34px, 5vw, 48px);
+  }
+
+  .projects-page .cta {
+    padding: 54px 0;
+  }
+
+  .projects-page .cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .projects-page .cta h2 {
+    font-size: clamp(34px, 5vw, 46px);
+  }
 
   /* ========================================
      CONTACT PAGE
   ======================================== */
 
-  .contact-grid {
+  .contact-page .hero {
+    padding: 48px 0 44px;
+  }
+
+  .contact-page .eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .contact-page .hero h1 {
+    max-width: 760px;
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .contact-page .hero-description {
+    max-width: 600px;
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .contact-page .contact {
+    padding: 48px 0 54px;
+  }
+
+  .contact-page .contact-grid {
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .contact-page .contact-intro {
+    font-size: 22px;
+  }
+
+  .contact-page .contact-copy {
+    margin-top: 16px;
+  }
+
+  .contact-page .contact-links {
+    margin-top: 30px;
+  }
+
+  .contact-page .form-group {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 18px;
+    padding: 20px 0;
+  }
+
+  .contact-page .form-group textarea {
+    min-height: 125px;
+  }
+
+  .contact-page .form-actions {
+    margin-top: 20px;
+  }
+
+  .contact-page .closing {
+    padding: 54px 0 58px;
+  }
+
+  .contact-page .closing-grid {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 38px;
+  }
+
+  .contact-page .closing-statement {
+    font-size: clamp(34px, 5vw, 48px);
+  }
+
+  /* ========================================
+     AMAZON PROJECT
+  ======================================== */
+
+  .amazon-project-page .hero {
+    padding: 46px 0 42px;
+  }
+
+  .amazon-project-page .back {
+    margin-bottom: 24px;
+  }
+
+  .amazon-project-page h1 {
+    max-width: 860px;
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .amazon-project-page .tagline {
+    max-width: 760px;
+    margin-top: 22px;
+    font-size: 18px;
+  }
+
+  .amazon-project-page .hero-grid,
+  .amazon-project-page .section-head,
+  .amazon-project-page .synthesis-grid {
     grid-template-columns: 1fr;
-    gap: 70px;
+    gap: 18px;
   }
 
-  .contact {
-    padding: 80px 0 90px;
+  .amazon-project-page .hero-grid {
+    margin-top: 34px;
+    padding-top: 22px;
   }
 
-  .closing {
-    padding: 90px 0;
+  .amazon-project-page .section-index,
+  .amazon-project-page .synthesis-label {
+    padding-top: 0;
   }
 
-  .closing-grid {
+  .amazon-project-page .nda {
+    margin-top: 26px;
+  }
+
+  .amazon-project-page .section {
+    padding: 56px 0;
+  }
+
+  .amazon-project-page .section-head {
+    margin-bottom: 30px;
+  }
+
+  .amazon-project-page h2 {
+    font-size: clamp(34px, 5.5vw, 50px);
+  }
+
+  .amazon-project-page .section-copy {
+    margin-top: 16px;
+  }
+
+  .amazon-project-page .story-grid,
+  .amazon-project-page .model-grid,
+  .amazon-project-page .workflow-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 
+  .amazon-project-page .story-card,
+  .amazon-project-page .stage,
+  .amazon-project-page .panel,
+  .amazon-project-page .workflow,
+  .amazon-project-page .ba {
+    min-height: auto;
+  }
+
+  .amazon-project-page .view-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .amazon-project-page .evolution {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .amazon-project-page .big-arrow {
+    min-height: 22px;
+    transform: rotate(90deg);
+  }
+
+  .amazon-project-page .pipe-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .amazon-project-page .pipe-row .arrow {
+    width: 1px;
+    height: 22px;
+    margin: 0 auto;
+  }
+
+  .amazon-project-page .pipe-row .arrow::after {
+    right: -3px;
+    top: auto;
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+
+  .amazon-project-page .synthesis {
+    padding: 58px 0;
+  }
+
+  .amazon-project-page .loop {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .amazon-project-page .loop-arrow {
+    transform: rotate(90deg);
+  }
+
+  .amazon-project-page .next {
+    padding: 50px 0;
+  }
+
+  .amazon-project-page .next-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* ========================================
+     BOSCH PROJECT
+  ======================================== */
+
+  .bosch-project-page .hero {
+    padding: 46px 0 42px;
+  }
+
+  .bosch-project-page .back {
+    margin-bottom: 24px;
+  }
+
+  .bosch-project-page h1 {
+    max-width: 860px;
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .bosch-project-page .tagline {
+    max-width: 760px;
+    margin-top: 22px;
+    font-size: 18px;
+  }
+
+  .bosch-project-page .hero-grid,
+  .bosch-project-page .section-head,
+  .bosch-project-page .synthesis-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .bosch-project-page .hero-grid {
+    margin-top: 34px;
+    padding-top: 22px;
+  }
+
+  .bosch-project-page .section-index,
+  .bosch-project-page .synthesis-label {
+    padding-top: 0;
+  }
+
+  .bosch-project-page .ownership,
+  .bosch-project-page .nda {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .bosch-project-page .section {
+    padding: 56px 0;
+  }
+
+  .bosch-project-page .section-head {
+    margin-bottom: 30px;
+  }
+
+  .bosch-project-page h2 {
+    font-size: clamp(34px, 5.5vw, 50px);
+  }
+
+  .bosch-project-page .section-copy {
+    margin-top: 16px;
+  }
+
+  .bosch-project-page .story-grid,
+  .bosch-project-page .gov-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bosch-project-page .story-card,
+  .bosch-project-page .panel,
+  .bosch-project-page .writeback-card,
+  .bosch-project-page .workflow,
+  .bosch-project-page .role-card,
+  .bosch-project-page .ba {
+    min-height: auto;
+  }
+
+  .bosch-project-page .role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bosch-project-page .pipe-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .bosch-project-page .pipe-row .arrow {
+    width: 1px;
+    height: 22px;
+    margin: 0 auto;
+  }
+
+  .bosch-project-page .pipe-row .arrow::after {
+    right: -3px;
+    top: auto;
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+
+  .bosch-project-page .synthesis {
+    padding: 58px 0;
+  }
+
+  .bosch-project-page .loop {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .bosch-project-page .loop-arrow {
+    transform: rotate(90deg);
+  }
+
+  .bosch-project-page .next {
+    padding: 50px 0;
+  }
+
+  .bosch-project-page .next-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  /* ========================================
+     ZEISS PROJECT
+  ======================================== */
+
+  .zeiss-project-page .hero {
+    padding: 46px 0 42px;
+  }
+
+  .zeiss-project-page .back {
+    margin-bottom: 24px;
+  }
+
+  .zeiss-project-page h1 {
+    max-width: 860px;
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .zeiss-project-page .tagline {
+    max-width: 760px;
+    margin-top: 22px;
+    font-size: 18px;
+  }
+
+  .zeiss-project-page .hero-grid,
+  .zeiss-project-page .section-head,
+  .zeiss-project-page .synthesis-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .zeiss-project-page .hero-grid {
+    margin-top: 34px;
+    padding-top: 22px;
+  }
+
+  .zeiss-project-page .section-index,
+  .zeiss-project-page .synthesis-label {
+    padding-top: 0;
+  }
+
+  .zeiss-project-page .nda {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 26px;
+  }
+
+  .zeiss-project-page .section {
+    padding: 56px 0;
+  }
+
+  .zeiss-project-page .section-head {
+    margin-bottom: 30px;
+  }
+
+  .zeiss-project-page h2 {
+    font-size: clamp(34px, 5.5vw, 50px);
+  }
+
+  .zeiss-project-page .section-copy {
+    margin-top: 16px;
+  }
+
+  .zeiss-project-page .story-grid,
+  .zeiss-project-page .route-grid,
+  .zeiss-project-page .validation-grid,
+  .zeiss-project-page .schema-grid,
+  .zeiss-project-page .ops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zeiss-project-page .story-card,
+  .zeiss-project-page .panel,
+  .zeiss-project-page .schema-card,
+  .zeiss-project-page .exception-card,
+  .zeiss-project-page .route,
+  .zeiss-project-page .ba {
+    min-height: auto;
+  }
+
+  .zeiss-project-page .pipe-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .zeiss-project-page .pipe-row .arrow {
+    width: 1px;
+    height: 22px;
+    margin: 0 auto;
+  }
+
+  .zeiss-project-page .pipe-row .arrow::after {
+    right: -3px;
+    top: auto;
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+
+  .zeiss-project-page .route-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .zeiss-project-page .synthesis {
+    padding: 58px 0;
+  }
+
+  .zeiss-project-page .loop {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .zeiss-project-page .loop-arrow {
+    transform: rotate(90deg);
+  }
+
+  .zeiss-project-page .next {
+    padding: 50px 0;
+  }
+
+  .zeiss-project-page .next-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  /* ========================================
+     DOW PROJECT
+  ======================================== */
+
+  .dow-project-page .hero {
+    padding: 46px 0 42px;
+  }
+
+  .dow-project-page .back {
+    margin-bottom: 24px;
+  }
+
+  .dow-project-page h1 {
+    max-width: 860px;
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .dow-project-page .tagline {
+    max-width: 760px;
+    margin-top: 22px;
+    font-size: 18px;
+  }
+
+  .dow-project-page .hero-grid,
+  .dow-project-page .section-head,
+  .dow-project-page .synthesis-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .dow-project-page .hero-grid {
+    margin-top: 34px;
+    padding-top: 22px;
+  }
+
+  .dow-project-page .section-index,
+  .dow-project-page .synthesis-label {
+    padding-top: 0;
+  }
+
+  .dow-project-page .nda {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 26px;
+  }
+
+  .dow-project-page .section {
+    padding: 56px 0;
+  }
+
+  .dow-project-page .section-head {
+    margin-bottom: 30px;
+  }
+
+  .dow-project-page h2 {
+    font-size: clamp(34px, 5.5vw, 50px);
+  }
+
+  .dow-project-page .section-copy {
+    margin-top: 16px;
+  }
+
+  .dow-project-page .story-grid,
+  .dow-project-page .tech-grid,
+  .dow-project-page .control-grid,
+  .dow-project-page .model-grid,
+  .dow-project-page .exp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dow-project-page .story-card,
+  .dow-project-page .panel,
+  .dow-project-page .model-card,
+  .dow-project-page .chart-panel,
+  .dow-project-page .control-copy {
+    min-height: auto;
+  }
+
+  .dow-project-page .metric-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dow-project-page .pipeline {
+    padding: 22px;
+  }
+
+  .dow-project-page .branches {
+    width: 66%;
+    margin-left: 34%;
+  }
+
+  .dow-project-page .branch-stem {
+    width: 66%;
+    margin-left: 34%;
+  }
+
+  .dow-project-page .synthesis {
+    padding: 58px 0;
+  }
+
+  .dow-project-page .loop {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .dow-project-page .loop-arrow {
+    transform: rotate(90deg);
+  }
+
+  .dow-project-page .next {
+    padding: 50px 0;
+  }
+
+  .dow-project-page .next-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  /* ========================================
+     ASK VENKAT PROJECT
+  ======================================== */
+
+  .ask-venkat-project-page .hero {
+    padding: 46px 0 42px;
+  }
+
+  .ask-venkat-project-page .hero h1 {
+    font-size: clamp(46px, 8vw, 66px);
+  }
+
+  .ask-venkat-project-page .hero-description {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .ask-venkat-project-page .section {
+    padding: 54px 0;
+  }
+
+  .ask-venkat-project-page .section-grid,
+  .ask-venkat-project-page .architecture-heading,
+  .ask-venkat-project-page .project-cta-grid {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 38px;
+  }
+
+  .ask-venkat-project-page .section-content h2,
+  .ask-venkat-project-page .architecture-heading h2,
+  .ask-venkat-project-page .project-cta h2 {
+    font-size: clamp(34px, 5vw, 48px);
+  }
+
+  .ask-venkat-project-page .architecture-flow {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .ask-venkat-project-page .architecture-arrow {
+    display: none;
+  }
+
+  .ask-venkat-project-page .architecture-step {
+    min-height: 136px;
+  }
+
+  .ask-venkat-project-page .project-cta {
+    padding: 54px 0;
+  }
 
   /* ========================================
      FOOTER — ALL PAGES
@@ -238,7 +941,6 @@
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
-
     gap: 20px;
   }
 
@@ -262,218 +964,1700 @@
   .container {
     width: calc(100% - 32px);
   }
-/* ========================================
+
+  /* ========================================
      SHARED HERO
   ======================================== */
 
-  .hero {
+  body:not(.about-page) .hero {
     padding: 65px 0 70px;
   }
 
-  .eyebrow {
+  body:not(.about-page) .eyebrow {
     margin-bottom: 22px;
   }
 
-  .hero h1 {
+  body:not(.about-page) .hero h1 {
     font-size: clamp(46px, 14vw, 68px);
     line-height: 1;
   }
 
-  .hero-description {
+  body:not(.about-page) .hero-description {
     margin-top: 32px;
     font-size: 17px;
   }
 
-
-  /* ========================================
-     ABOUT PAGE
-  ======================================== */
-
-  .intro {
-    padding: 60px 0;
-  }
-
-  .intro-text {
-    font-size: 22px;
-  }
-
-  .framework {
-    padding: 65px 0;
-  }
-
-  .framework-title {
-    font-size: 37px;
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  .step,
-  .step:nth-child(odd),
-  .step:nth-child(even) {
-    padding: 28px 0 32px;
-
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .step:last-child {
-    border-bottom: 0;
-  }
-
-  .step-number {
-    margin-bottom: 25px;
-  }
-
-  .thinking {
-    padding: 75px 0;
-  }
-
-  .thinking-quote {
-    font-size: 36px;
-  }
-
-  .metric-number {
-    font-size: 50px;
-  }
-
-  .philosophy {
-    padding: 75px 0;
-  }
-
-  .philosophy p {
-    font-size: 43px;
-  }
-
+  /* About page responsive rules live in index.css. */
 
   /* ========================================
      EXPERIENCE PAGE
+     Mobile-first spacing: compact without feeling cramped.
   ======================================== */
 
-  .career-strip-grid {
+  .experience-page .hero {
+    padding: 38px 0 36px;
+  }
+
+  .experience-page .eyebrow {
+    margin-bottom: 15px;
+  }
+
+  .experience-page .hero h1 {
+    font-size: clamp(38px, 12vw, 52px);
+    line-height: 0.98;
+  }
+
+  .experience-page .hero-description {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .experience-page .resume-actions {
+    margin-top: 20px;
+  }
+
+  .experience-page .resume-download-btn {
+    min-height: 46px;
+    padding: 10px 16px;
+  }
+
+  .experience-page .career-strip-grid {
     grid-template-columns: 1fr;
   }
 
-  .career-strip-item,
-  .career-strip-item:not(:first-child) {
+  .experience-page .career-strip-item,
+  .experience-page .career-strip-item:not(:first-child) {
     min-height: auto;
-
-    padding: 24px 0;
-
+    padding: 17px 0;
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
   }
 
-  .career-strip-item:last-child {
+  .experience-page .career-strip-item:last-child {
     border-bottom: 0;
   }
 
-  .career-strip-label {
-    margin-bottom: 16px;
+  .experience-page .career-strip-label {
+    margin-bottom: 7px;
   }
 
-  .experience-intro,
-  .company,
-  .capabilities,
-  .cta {
-    padding: 68px 0;
+  .experience-page .company {
+    padding: 38px 0 42px;
   }
 
-  .company-meta {
+  .experience-page .company-header {
+    gap: 10px;
+  }
+
+  .experience-page .company-name {
+    font-size: clamp(30px, 9vw, 38px);
+    line-height: 1.08;
+  }
+
+  .experience-page .company-meta {
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
+    margin-top: 12px;
+    font-size: 13px;
   }
 
-  .company-meta span::after {
+  .experience-page .company-meta span::after {
     display: none;
   }
 
-  .company-summary {
-    font-size: 17px;
+  .experience-page .company-focus {
+    margin-top: 13px;
+    font-size: 11px;
+    line-height: 1.45;
   }
 
-  .ownership {
-    margin-top: 60px;
+  .experience-page .company-summary {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.58;
   }
 
-  .company-outcome {
-    margin-top: 50px;
+  .experience-page .ownership {
+    margin-top: 28px;
+    padding-top: 18px;
   }
 
-  .outcome-card,
-  .project-card {
+  .experience-page .ownership-label {
+    margin-bottom: 12px;
+  }
+
+  .experience-page .ownership-item,
+  .experience-page .ownership-item:not(:first-child) {
+    padding: 18px 0;
+  }
+
+  .experience-page .ownership-number {
+    margin-bottom: 8px;
+  }
+
+  .experience-page .ownership-item h3 {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .experience-page .ownership-item p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .experience-page .company-outcome {
+    margin-top: 26px;
+    gap: 12px;
+  }
+
+  .experience-page .outcome-card,
+  .experience-page .project-card {
     min-height: auto;
-    padding: 26px;
+    padding: 20px;
   }
 
-  .project-card h3 {
-    font-size: 26px;
+  .experience-page .impact-list {
+    margin-top: 15px;
+    padding-left: 18px;
   }
 
-  .capability-grid {
+  .experience-page .impact-list li + li {
+    margin-top: 7px;
+  }
+
+  .experience-page .project-card h3 {
+    margin-top: 11px;
+    font-size: 22px;
+  }
+
+  .experience-page .project-link {
+    margin-top: 17px;
+    font-size: 14px;
+  }
+
+  .experience-page .cta {
+    padding: 42px 0;
+  }
+
+  .experience-page .cta-inner {
+    gap: 22px;
+  }
+
+  .experience-page .cta h2 {
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.08;
+  }
+
+  .experience-page .cta-links {
+    gap: 10px;
+  }
+
+  /* ========================================
+     PROJECTS PAGE
+  ======================================== */
+
+  .projects-page .hero {
+    padding: 36px 0 34px;
+  }
+
+  .projects-page .eyebrow {
+    margin-bottom: 0;
+  }
+
+  .projects-page .hero h1 {
+    max-width: 100%;
+    margin-top: 15px;
+    font-size: clamp(37px, 11.5vw, 50px);
+    line-height: 0.99;
+  }
+
+  .projects-page .hero-copy {
+    max-width: 100%;
+    margin-top: 17px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .projects-page .selector-head {
+    display: block;
+    padding: 26px 0 20px;
+  }
+
+  .projects-page .selector-head .section-label {
+    margin-bottom: 13px;
+  }
+
+  .projects-page .lanes {
     grid-template-columns: 1fr;
   }
 
-  .capability,
-  .capability:not(:first-child) {
-    padding: 26px 0;
+  .projects-page .lane,
+  .projects-page .lane + .lane {
+    min-height: auto;
+    padding: 23px 0;
+    border-left: 0;
+  }
 
+  .projects-page .lane + .lane {
+    border-top: 1px solid var(--line);
+  }
+
+  .projects-page .lane:first-child:hover {
+    padding-left: 0;
+  }
+
+  .projects-page .lane h2 {
+    margin-top: 16px;
+    font-size: 30px;
+  }
+
+  .projects-page .lane p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .projects-page .lane .arrow {
+    margin-top: 16px;
+  }
+
+  .projects-page .collection {
+    padding: 38px 0 42px;
+  }
+
+  .projects-page .collection-head {
+    display: block;
+    margin-bottom: 22px;
+  }
+
+  .projects-page .collection-head .section-label {
+    margin-bottom: 13px;
+  }
+
+  .projects-page .collection-head h2 {
+    font-size: 31px;
+  }
+
+  .projects-page .collection-head p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .projects-page .project-grid,
+  .projects-page .personal .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-page .card,
+  .projects-page .card:nth-child(even),
+  .projects-page .personal .card,
+  .projects-page .personal .card:nth-child(2),
+  .projects-page .personal .card:last-child,
+  .projects-page .personal .card:nth-child(odd) {
+    grid-column: auto;
+    min-height: auto;
+    padding: 22px 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .projects-page .card h3 {
+    margin-top: 13px;
+    font-size: 22px;
+  }
+
+  .projects-page .card .tagline {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .projects-page .tags {
+    margin-top: 15px;
+  }
+
+  .projects-page .metric {
+    margin-top: 17px;
+  }
+
+  .projects-page .card > a,
+  .projects-page .project-actions {
+    margin-top: 17px;
+  }
+
+  .projects-page .personal .card h3 {
+    font-size: 21px;
+  }
+
+  .projects-page .closing {
+    padding: 40px 0 44px;
+  }
+
+  .projects-page .closing h2 {
+    font-size: clamp(30px, 9vw, 39px);
+  }
+
+  .projects-page .closing p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .projects-page .cta {
+    padding: 40px 0;
+  }
+
+  .projects-page .cta-inner {
+    gap: 22px;
+  }
+
+  .projects-page .cta h2 {
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.08;
+  }
+
+  .projects-page .cta-links {
+    gap: 10px;
+  }
+
+  /* ========================================
+     AMAZON PROJECT
+  ======================================== */
+
+  .amazon-project-page .hero {
+    padding: 34px 0 32px;
+  }
+
+  .amazon-project-page .back {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .amazon-project-page .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .amazon-project-page h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 11.5vw, 49px);
+    line-height: 0.99;
+  }
+
+  .amazon-project-page .tagline {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .amazon-project-page .hero-grid {
+    margin-top: 26px;
+    padding-top: 18px;
+    gap: 16px;
+  }
+
+  .amazon-project-page .hero-copy {
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  .amazon-project-page .tags {
+    margin-top: 17px;
+    gap: 6px;
+  }
+
+  .amazon-project-page .tag {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .amazon-project-page .nda {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-top: 22px;
+    padding: 15px 16px;
+  }
+
+  .amazon-project-page .section {
+    padding: 40px 0;
+  }
+
+  .amazon-project-page .section-head {
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .amazon-project-page h2 {
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.07;
+  }
+
+  .amazon-project-page .section-copy {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .amazon-project-page .story-grid,
+  .amazon-project-page .model-grid,
+  .amazon-project-page .workflow-grid,
+  .amazon-project-page .view-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .amazon-project-page .story-card,
+  .amazon-project-page .stage,
+  .amazon-project-page .panel,
+  .amazon-project-page .workflow,
+  .amazon-project-page .view-card,
+  .amazon-project-page .ba {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .amazon-project-page .story-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .amazon-project-page .story-card p {
+    margin-top: 11px;
+  }
+
+  .amazon-project-page .stage h3 {
+    margin-top: 20px;
+    font-size: 21px;
+  }
+
+  .amazon-project-page .stage p {
+    margin-top: 10px;
+  }
+
+  .amazon-project-page .pipeline {
+    padding: 15px;
+  }
+
+  .amazon-project-page .node {
+    min-height: 82px;
+    padding: 13px 10px;
+  }
+
+  .amazon-project-page .pipe-note {
+    margin-top: 17px;
+  }
+
+  .amazon-project-page .entity-list,
+  .amazon-project-page .steps {
+    margin-top: 16px;
+  }
+
+  .amazon-project-page .entity {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    padding: 10px 0;
+  }
+
+  .amazon-project-page .view-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  .amazon-project-page .view-card p {
+    margin-top: 9px;
+  }
+
+  .amazon-project-page .step {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    padding: 11px 0;
+  }
+
+  .amazon-project-page .before-after {
+    grid-template-columns: 1fr;
+  }
+
+  .amazon-project-page .ba:first-child {
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
-  .capability:last-child {
-    border-bottom: 0;
+  .amazon-project-page .ba h3 {
+    margin-top: 18px;
+    font-size: 22px;
   }
 
+  .amazon-project-page .ba ul {
+    margin-top: 15px;
+    line-height: 1.65;
+  }
+
+  .amazon-project-page .synthesis {
+    padding: 42px 0;
+  }
+
+  .amazon-project-page .synthesis h2 {
+    font-size: clamp(31px, 9vw, 40px);
+  }
+
+  .amazon-project-page .synthesis p {
+    margin-top: 17px;
+    font-size: 14px;
+  }
+
+  .amazon-project-page .loop {
+    margin-top: 26px;
+  }
+
+  .amazon-project-page .loop-node {
+    min-height: 76px;
+    padding: 13px;
+  }
+
+  .amazon-project-page .next {
+    padding: 38px 0;
+  }
+
+  .amazon-project-page .next-inner {
+    gap: 18px;
+  }
+
+  .amazon-project-page .next h2 {
+    margin-top: 7px;
+    font-size: clamp(29px, 8.5vw, 37px);
+  }
+
+  /* ========================================
+     BOSCH PROJECT
+  ======================================== */
+
+  .bosch-project-page .hero {
+    padding: 34px 0 32px;
+  }
+
+  .bosch-project-page .back {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .bosch-project-page .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .bosch-project-page h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 11.5vw, 49px);
+    line-height: 0.99;
+  }
+
+  .bosch-project-page .tagline {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .bosch-project-page .hero-grid {
+    margin-top: 26px;
+    padding-top: 18px;
+    gap: 16px;
+  }
+
+  .bosch-project-page .hero-copy {
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  .bosch-project-page .tags {
+    margin-top: 17px;
+    gap: 6px;
+  }
+
+  .bosch-project-page .tag {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .bosch-project-page .ownership,
+  .bosch-project-page .nda {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 15px 16px;
+  }
+
+  .bosch-project-page .ownership {
+    margin-top: 22px;
+  }
+
+  .bosch-project-page .nda {
+    margin-top: 12px;
+  }
+
+  .bosch-project-page .section {
+    padding: 40px 0;
+  }
+
+  .bosch-project-page .section-head {
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .bosch-project-page h2 {
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.07;
+  }
+
+  .bosch-project-page .section-copy {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .bosch-project-page .story-grid,
+  .bosch-project-page .gov-grid,
+  .bosch-project-page .role-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .bosch-project-page .story-card,
+  .bosch-project-page .panel,
+  .bosch-project-page .writeback-card,
+  .bosch-project-page .workflow,
+  .bosch-project-page .role-card,
+  .bosch-project-page .ba {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .bosch-project-page .story-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .bosch-project-page .story-card p {
+    margin-top: 11px;
+  }
+
+  .bosch-project-page .pipeline {
+    padding: 15px;
+  }
+
+  .bosch-project-page .node {
+    min-height: 82px;
+    padding: 13px 10px;
+  }
+
+  .bosch-project-page .scale-line {
+    margin-top: 11px;
+    padding-top: 11px;
+    font-size: 12px;
+  }
+
+  .bosch-project-page .panel h3,
+  .bosch-project-page .workflow h3 {
+    font-size: 21px;
+  }
+
+  .bosch-project-page .rules,
+  .bosch-project-page .steps {
+    margin-top: 16px;
+  }
+
+  .bosch-project-page .rule {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    padding: 10px 0;
+  }
+
+  .bosch-project-page .writeback-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .bosch-project-page .writeback-card p {
+    margin-top: 11px;
+  }
+
+  .bosch-project-page .role-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  .bosch-project-page .role-card p {
+    margin-top: 10px;
+  }
+
+  .bosch-project-page .decision-box {
+    margin-top: 16px;
+    padding: 17px;
+  }
+
+  .bosch-project-page .decision-box p {
+    margin-top: 9px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .bosch-project-page .step {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    padding: 11px 0;
+  }
+
+  .bosch-project-page .before-after {
+    grid-template-columns: 1fr;
+  }
+
+  .bosch-project-page .ba:first-child {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .bosch-project-page .ba h3 {
+    margin-top: 18px;
+    font-size: 22px;
+  }
+
+  .bosch-project-page .ba ul {
+    margin-top: 15px;
+    line-height: 1.65;
+  }
+
+  .bosch-project-page .synthesis {
+    padding: 42px 0;
+  }
+
+  .bosch-project-page .synthesis h2 {
+    font-size: clamp(31px, 9vw, 40px);
+  }
+
+  .bosch-project-page .synthesis p {
+    margin-top: 17px;
+    font-size: 14px;
+  }
+
+  .bosch-project-page .loop {
+    margin-top: 26px;
+  }
+
+  .bosch-project-page .loop-node {
+    min-height: 76px;
+    padding: 13px;
+  }
+
+  .bosch-project-page .next {
+    padding: 38px 0;
+  }
+
+  .bosch-project-page .next-inner {
+    gap: 18px;
+  }
+
+  .bosch-project-page .next h2 {
+    margin-top: 7px;
+    font-size: clamp(29px, 8.5vw, 37px);
+  }
+
+  /* ========================================
+     ZEISS PROJECT
+  ======================================== */
+
+  .zeiss-project-page .hero {
+    padding: 34px 0 32px;
+  }
+
+  .zeiss-project-page .back {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .zeiss-project-page .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .zeiss-project-page h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 11.5vw, 49px);
+    line-height: 0.99;
+  }
+
+  .zeiss-project-page .tagline {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .zeiss-project-page .hero-grid {
+    margin-top: 26px;
+    padding-top: 18px;
+    gap: 16px;
+  }
+
+  .zeiss-project-page .hero-copy {
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  .zeiss-project-page .tags {
+    margin-top: 17px;
+    gap: 6px;
+  }
+
+  .zeiss-project-page .tag {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .zeiss-project-page .nda {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-top: 22px;
+    padding: 15px 16px;
+  }
+
+  .zeiss-project-page .section {
+    padding: 40px 0;
+  }
+
+  .zeiss-project-page .section-head {
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .zeiss-project-page h2 {
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.07;
+  }
+
+  .zeiss-project-page .section-copy {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .zeiss-project-page .story-grid,
+  .zeiss-project-page .route-grid,
+  .zeiss-project-page .validation-grid,
+  .zeiss-project-page .schema-grid,
+  .zeiss-project-page .ops-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .zeiss-project-page .story-card,
+  .zeiss-project-page .panel,
+  .zeiss-project-page .schema-card,
+  .zeiss-project-page .exception-card,
+  .zeiss-project-page .route,
+  .zeiss-project-page .ba {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .zeiss-project-page .story-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .zeiss-project-page .story-card p {
+    margin-top: 11px;
+  }
+
+  .zeiss-project-page .pipeline {
+    padding: 15px;
+  }
+
+  .zeiss-project-page .node {
+    min-height: 82px;
+    padding: 13px 10px;
+  }
+
+  .zeiss-project-page .pipe-note {
+    margin-top: 17px;
+  }
+
+  .zeiss-project-page .route-steps {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .zeiss-project-page .route strong {
+    font-size: 16px;
+  }
+
+  .zeiss-project-page .rules,
+  .zeiss-project-page .schema-table,
+  .zeiss-project-page .ops-list {
+    margin-top: 16px;
+  }
+
+  .zeiss-project-page .rule {
+    grid-template-columns: 1fr auto;
+    gap: 4px 10px;
+    padding: 10px 0;
+  }
+
+  .zeiss-project-page .rule span {
+    grid-column: 1 / -1;
+  }
+
+  .zeiss-project-page .exception-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .zeiss-project-page .exception-card p {
+    margin-top: 11px;
+  }
+
+  .zeiss-project-page .schema-row,
+  .zeiss-project-page .ops-row {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    padding: 10px 0;
+  }
+
+  .zeiss-project-page .ops-grid .story-card.dark {
+    margin-top: 14px !important;
+    min-height: auto !important;
+  }
+
+  .zeiss-project-page .before-after {
+    grid-template-columns: 1fr;
+  }
+
+  .zeiss-project-page .ba:first-child {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .zeiss-project-page .ba h3 {
+    margin-top: 18px;
+    font-size: 22px;
+  }
+
+  .zeiss-project-page .ba ul {
+    margin-top: 15px;
+    line-height: 1.65;
+  }
+
+  .zeiss-project-page .synthesis {
+    padding: 42px 0;
+  }
+
+  .zeiss-project-page .synthesis h2 {
+    font-size: clamp(31px, 9vw, 40px);
+  }
+
+  .zeiss-project-page .synthesis p {
+    margin-top: 17px;
+    font-size: 14px;
+  }
+
+  .zeiss-project-page .loop {
+    margin-top: 26px;
+  }
+
+  .zeiss-project-page .loop-node {
+    min-height: 76px;
+    padding: 13px;
+  }
+
+  .zeiss-project-page .next {
+    padding: 38px 0;
+  }
+
+  .zeiss-project-page .next-inner {
+    gap: 18px;
+  }
+
+  .zeiss-project-page .next h2 {
+    margin-top: 7px;
+    font-size: clamp(29px, 8.5vw, 37px);
+  }
+
+  /* ========================================
+     DOW PROJECT
+  ======================================== */
+
+  .dow-project-page .hero {
+    padding: 34px 0 32px;
+  }
+
+  .dow-project-page .back {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .dow-project-page .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .dow-project-page h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 11.5vw, 49px);
+    line-height: 0.99;
+  }
+
+  .dow-project-page .tagline {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .dow-project-page .hero-grid {
+    margin-top: 26px;
+    padding-top: 18px;
+    gap: 16px;
+  }
+
+  .dow-project-page .hero-copy {
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  .dow-project-page .tags {
+    margin-top: 17px;
+    gap: 6px;
+  }
+
+  .dow-project-page .tag {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .dow-project-page .nda {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-top: 22px;
+    padding: 15px 16px;
+  }
+
+  .dow-project-page .section {
+    padding: 40px 0;
+  }
+
+  .dow-project-page .section-head {
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .dow-project-page h2 {
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.07;
+  }
+
+  .dow-project-page .section-copy {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .dow-project-page .story-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .dow-project-page .story-card,
+  .dow-project-page .panel,
+  .dow-project-page .model-card,
+  .dow-project-page .chart-panel,
+  .dow-project-page .control-copy {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .dow-project-page .story-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .dow-project-page .story-card p {
+    margin-top: 11px;
+  }
+
+  .dow-project-page .pipeline {
+    padding: 15px;
+  }
+
+  .dow-project-page .pipe-top,
+  .dow-project-page .model-flow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .dow-project-page .pipe-top .arrow,
+  .dow-project-page .model-flow .arrow {
+    width: 1px;
+    height: 22px;
+    margin: 0 auto;
+  }
+
+  .dow-project-page .pipe-top .arrow::after,
+  .dow-project-page .model-flow .arrow::after {
+    right: -3px;
+    top: auto;
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+
+  .dow-project-page .branch-stem {
+    width: 1px;
+    height: 22px;
+    margin: 0 auto;
+    background: var(--line);
+  }
+
+  .dow-project-page .branch-stem::before,
+  .dow-project-page .branch-stem::after {
+    display: none;
+  }
+
+  .dow-project-page .branches {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+  }
+
+  .dow-project-page .branch::before {
+    display: none;
+  }
+
+  .dow-project-page .phase-banner {
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .dow-project-page .metric-row,
+  .dow-project-page .eval-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .dow-project-page .metric {
+    padding: 13px;
+  }
+
+  .dow-project-page .metric strong,
+  .dow-project-page .eval strong {
+    font-size: 24px;
+  }
+
+  .dow-project-page .method {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 11px 0;
+  }
+
+  .dow-project-page .fi {
+    margin-top: 16px;
+    gap: 11px;
+  }
+
+  .dow-project-page .fi-row {
+    grid-template-columns: minmax(95px, 125px) minmax(60px, 1fr) 30px;
+    gap: 7px;
+  }
+
+  .dow-project-page .control-grid {
+    margin-top: 12px;
+  }
+
+  .dow-project-page .chart-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .dow-project-page .chart-title span {
+    text-align: left;
+  }
+
+  .dow-project-page .chart-panel {
+    overflow-x: auto;
+  }
+
+  .dow-project-page .chart-panel svg {
+    min-width: 560px;
+  }
+
+  .dow-project-page .control-copy h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .dow-project-page .control-copy p {
+    margin-top: 11px;
+  }
+
+  .dow-project-page .model-flow {
+    margin-top: 16px;
+  }
+
+  .dow-project-page .eval-grid {
+    margin-top: 16px;
+  }
+
+  .dow-project-page .model-note {
+    margin-top: 12px;
+  }
+
+  .dow-project-page .synthesis {
+    padding: 42px 0;
+  }
+
+  .dow-project-page .synthesis h2 {
+    font-size: clamp(31px, 9vw, 40px);
+  }
+
+  .dow-project-page .synthesis p {
+    margin-top: 17px;
+    font-size: 14px;
+  }
+
+  .dow-project-page .loop {
+    margin-top: 26px;
+  }
+
+  .dow-project-page .loop-node {
+    min-height: 76px;
+    padding: 13px;
+  }
+
+  .dow-project-page .next {
+    padding: 38px 0;
+  }
+
+  .dow-project-page .next-inner {
+    gap: 18px;
+  }
+
+  .dow-project-page .next h2 {
+    margin-top: 7px;
+    font-size: clamp(29px, 8.5vw, 37px);
+  }
+
+  /* ========================================
+     ASK VENKAT PROJECT
+  ======================================== */
+
+  .ask-venkat-project-page .hero {
+    padding: 34px 0 32px;
+  }
+
+  .ask-venkat-project-page .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .ask-venkat-project-page .hero h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 11.5vw, 49px);
+    line-height: 0.99;
+  }
+
+  .ask-venkat-project-page .hero-description {
+    max-width: 100%;
+    margin-top: 17px;
+    font-size: 15px;
+  }
+
+  .ask-venkat-project-page .hero-actions {
+    gap: 13px;
+    margin-top: 20px;
+  }
+
+  .ask-venkat-project-page .section {
+    padding: 40px 0;
+  }
+
+  .ask-venkat-project-page .section-grid,
+  .ask-venkat-project-page .architecture-heading,
+  .ask-venkat-project-page .project-cta-grid {
+    display: block;
+  }
+
+  .ask-venkat-project-page .section-label {
+    margin-bottom: 13px;
+  }
+
+  .ask-venkat-project-page .section-content h2,
+  .ask-venkat-project-page .architecture-heading h2,
+  .ask-venkat-project-page .project-cta h2 {
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.07;
+  }
+
+  .ask-venkat-project-page .section-content > .lead {
+    font-size: 18px;
+  }
+
+  .ask-venkat-project-page .section-content > p,
+  .ask-venkat-project-page .project-cta p {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .ask-venkat-project-page .architecture-heading {
+    margin-bottom: 22px;
+  }
+
+  .ask-venkat-project-page .architecture-flow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ask-venkat-project-page .architecture-step {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .ask-venkat-project-page .architecture-step strong {
+    margin-top: 17px;
+  }
+
+  .ask-venkat-project-page .tech-grid {
+    grid-template-columns: 1fr;
+    margin-top: 19px;
+  }
+
+  .ask-venkat-project-page .tech-item,
+  .ask-venkat-project-page .tech-item:nth-child(odd),
+  .ask-venkat-project-page .tech-item:nth-child(even) {
+    min-height: auto;
+    padding: 16px 0;
+    border-right: 0;
+  }
+
+  .ask-venkat-project-page .tech-item strong {
+    margin-top: 9px;
+    font-size: 17px;
+  }
+
+  .ask-venkat-project-page .decision-list {
+    margin-top: 18px;
+  }
+
+  .ask-venkat-project-page .decision {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 11px;
+    padding: 14px 0;
+  }
+
+  .ask-venkat-project-page .project-cta {
+    padding: 40px 0;
+  }
+
+  .ask-venkat-project-page .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .ask-venkat-project-page .footer-links {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
 
   /* ========================================
      CONTACT PAGE
   ======================================== */
 
-  .contact {
-    padding: 65px 0 75px;
+  .contact-page .hero {
+    padding: 36px 0 34px;
   }
 
-  .contact-grid {
-    gap: 55px;
+  .contact-page .eyebrow {
+    margin-bottom: 15px;
   }
 
-  .contact-links {
-    margin-top: 45px;
+  .contact-page .hero h1 {
+    max-width: 100%;
+    font-size: clamp(37px, 11.5vw, 50px);
+    line-height: 0.99;
   }
 
-  .form-group {
-    grid-template-columns: 1fr;
-
-    gap: 12px;
-
-    padding: 22px 0;
+  .contact-page .hero-description {
+    max-width: 100%;
+    margin-top: 17px;
+    font-size: 15px;
+    line-height: 1.55;
   }
 
-  .form-group label {
+  .contact-page .contact {
+    padding: 36px 0 40px;
+  }
+
+  .contact-page .contact-grid {
+    display: block;
+  }
+
+  .contact-page .contact-info {
+    display: block;
+  }
+
+  .contact-page .contact-label {
+    margin-bottom: 14px;
+  }
+
+  .contact-page .contact-intro {
+    max-width: 500px;
+    font-size: 20px;
+  }
+
+  .contact-page .contact-copy {
+    max-width: 520px;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contact-page .contact-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 22px;
+  }
+
+  .contact-page .form-wrap {
+    margin-top: 34px;
+  }
+
+  .contact-page .form-group {
+    display: block;
+    padding: 17px 0;
+  }
+
+  .contact-page .form-group label {
+    display: block;
     padding-top: 0;
+    margin-bottom: 8px;
   }
 
-  .form-group textarea {
-    min-height: 140px;
+  .contact-page .form-group input,
+  .contact-page .form-group textarea {
+    font-size: 16px;
   }
 
-  .form-actions {
+  .contact-page .form-group textarea {
+    min-height: 118px;
+  }
+
+  .contact-page .form-actions {
     justify-content: flex-start;
+    margin-top: 18px;
   }
 
-  .closing {
-    padding: 75px 0;
+  .contact-page .closing {
+    padding: 40px 0 44px;
   }
 
-  .closing-statement {
-    font-size: 38px;
+  .contact-page .closing-grid {
+    display: block;
+  }
+
+  .contact-page .closing-label {
+    margin-bottom: 18px;
+  }
+
+  .contact-page .closing-statement {
+    max-width: 100%;
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.08;
   }
 
 }
 
+
+@media (max-width: 420px) {
+  .about-page .container {
+    width: calc(100% - 28px);
+  }
+}
+
+
+
+@media (max-width: 420px) {
+  .experience-page .container {
+    width: calc(100% - 28px);
+  }
+}
+
+
+@media (max-width: 420px) {
+  .projects-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .projects-page .hero h1 {
+    font-size: clamp(35px, 11.5vw, 46px);
+  }
+
+  .projects-page .lane h2 {
+    font-size: 28px;
+  }
+
+  .projects-page .collection-head h2 {
+    font-size: 29px;
+  }
+
+  .projects-page .card h3 {
+    font-size: 21px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .contact-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .contact-page .hero h1 {
+    font-size: clamp(35px, 11.5vw, 46px);
+  }
+
+  .contact-page .submit-button {
+    width: 100%;
+  }
+
+  .contact-page .closing-statement {
+    font-size: 30px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .amazon-project-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .amazon-project-page h1 {
+    font-size: clamp(34px, 11vw, 44px);
+  }
+
+  .amazon-project-page .section {
+    padding: 36px 0;
+  }
+
+  .amazon-project-page .story-card,
+  .amazon-project-page .stage,
+  .amazon-project-page .panel,
+  .amazon-project-page .workflow,
+  .amazon-project-page .view-card,
+  .amazon-project-page .ba {
+    padding: 16px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .bosch-project-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .bosch-project-page h1 {
+    font-size: clamp(34px, 11vw, 44px);
+  }
+
+  .bosch-project-page .section {
+    padding: 36px 0;
+  }
+
+  .bosch-project-page .story-card,
+  .bosch-project-page .panel,
+  .bosch-project-page .writeback-card,
+  .bosch-project-page .workflow,
+  .bosch-project-page .role-card,
+  .bosch-project-page .ba {
+    padding: 16px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .zeiss-project-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .zeiss-project-page h1 {
+    font-size: clamp(34px, 11vw, 44px);
+  }
+
+  .zeiss-project-page .section {
+    padding: 36px 0;
+  }
+
+  .zeiss-project-page .story-card,
+  .zeiss-project-page .panel,
+  .zeiss-project-page .schema-card,
+  .zeiss-project-page .exception-card,
+  .zeiss-project-page .route,
+  .zeiss-project-page .ba {
+    padding: 16px;
+  }
+
+  .zeiss-project-page .rule {
+    grid-template-columns: 1fr;
+  }
+
+  .zeiss-project-page .status {
+    justify-self: start;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .dow-project-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .dow-project-page h1 {
+    font-size: clamp(34px, 11vw, 44px);
+  }
+
+  .dow-project-page .section {
+    padding: 36px 0;
+  }
+
+  .dow-project-page .story-card,
+  .dow-project-page .panel,
+  .dow-project-page .model-card,
+  .dow-project-page .chart-panel,
+  .dow-project-page .control-copy {
+    padding: 16px;
+  }
+
+  .dow-project-page .metric-row,
+  .dow-project-page .eval-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dow-project-page .fi-row {
+    grid-template-columns: 1fr 34px;
+  }
+
+  .dow-project-page .fi-name {
+    grid-column: 1 / -1;
+  }
+
+  .dow-project-page .chart-panel svg {
+    min-width: 520px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .ask-venkat-project-page .container {
+    width: calc(100% - 28px);
+  }
+
+  .ask-venkat-project-page .hero h1 {
+    font-size: clamp(34px, 11vw, 44px);
+  }
+
+  .ask-venkat-project-page .section {
+    padding: 36px 0;
+  }
+}
 
 /* ==========================================
    REDUCED MOTION
@@ -489,7 +2673,6 @@
   *::before,
   *::after {
     scroll-behavior: auto !important;
-
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -501,6 +2684,7 @@
 /* ==========================================
    ASK AI NAV ACCENT
 =========================================== */
+
 .nav-links .ask-ai-nav {
   padding: 8px 14px;
   border: 1px solid var(--accent);
@@ -519,9 +2703,10 @@
   display: none;
 }
 
+
 /* ==========================================
    SHARED MOBILE NAVIGATION
-========================================== */
+=========================================== */
 
 body.menu-open {
   overflow: hidden;
@@ -584,11 +2769,8 @@ body.menu-open {
     padding: 7px 13px;
     border: 1px solid var(--accent);
     border-radius: 999px;
-
-    /* Keep Ask AI green on every mobile page */
     background: var(--accent);
     color: var(--bg, var(--background));
-
     font-size: 13px;
     font-weight: 600;
     line-height: 1;
@@ -600,6 +2782,14 @@ body.menu-open {
   .mobile-ask-ai.active {
     background: var(--accent);
     color: var(--bg, var(--background));
+  }
+
+  /* When hamburger is open, hide the header Ask AI button too.
+     Result: the open menu contains ONLY About / Experience / Projects / Contact. */
+  body.menu-open .mobile-ask-ai {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .nav-links {
@@ -643,12 +2833,10 @@ body.menu-open {
     color: var(--text);
   }
 
-  /* Hide Ask AI from the opened mobile menu.
-     Works even if a page is missing the ask-ai-nav class. */
-  .nav-links .ask-ai-nav,
+  /* Never show Ask AI as an item inside the mobile hamburger */
   .nav-links a[href*="ask-ai"],
-  .nav-links a[href$="/ask-ai/"],
-  .nav-links a[href$="ask-ai/"] {
+  .nav-links .desktop-ask-ai,
+  .nav-links .ask-ai-nav {
     display: none !important;
   }
 
@@ -657,11 +2845,23 @@ body.menu-open {
   }
 }
 
+
 @media (max-width: 420px) {
+
   .mobile-ask-ai {
     margin-right: 14px;
     padding: 6px 11px;
     font-size: 12px;
   }
+
 }
 
+
+/* Ask Venkat project: use the exact shared mobile header geometry. */
+@media (max-width: 700px) {
+  .ask-venkat-project-page .nav-links a[href*="ask-ai"],
+  .ask-venkat-project-page .nav-links .desktop-ask-ai,
+  .ask-venkat-project-page .nav-links .ask-ai-nav {
+    display: none !important;
+  }
+}

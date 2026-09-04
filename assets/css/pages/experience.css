@@ -833,105 +833,17 @@ button:focus-visible {
   font-size: clamp(36px, 4vw, 52px);
 }
 
-/* Responsive compact adjustments */
-@media (max-width: 900px) {
-  .container {
-    width: min(calc(100% - 32px), 760px);
-  }
+/* ==========================================
+   RESPONSIVE NOTE
+   Experience breakpoints are maintained in
+   assets/css/responsive.css to avoid duplicate
+   rules overriding each other.
+=========================================== */
 
-  .hero {
-    padding: 54px 0 48px;
-  }
 
-  .hero h1 {
-    font-size: clamp(48px, 11vw, 68px);
-  }
-
-  .career-strip-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .career-strip-item:nth-child(2) {
-    border-right: 0;
-  }
-
-  .career-strip-item:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--line);
-  }
-
-  .career-strip-item:nth-child(3) {
-    padding-left: 0;
-  }
-
-  .company {
-    padding: 52px 0;
-  }
-
-  .ownership-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ownership-item,
-  .ownership-item:not(:first-child) {
-    min-height: auto;
-    padding: 24px 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .ownership-item:last-child {
-    border-bottom: 0;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero {
-    padding: 44px 0 42px;
-  }
-
-  .hero h1 {
-    font-size: clamp(43px, 13vw, 60px);
-  }
-
-  .hero-description {
-    margin-top: 22px;
-    font-size: 16px;
-  }
-
-  .career-strip-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .career-strip-item,
-  .career-strip-item:not(:first-child) {
-    min-height: auto;
-    padding: 20px 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .career-strip-item:last-child {
-    border-bottom: 0;
-  }
-
-  .company {
-    padding: 44px 0;
-  }
-
-  .company-name {
-    font-size: 34px;
-  }
-
-  .company-meta {
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .company-meta span::after {
-    display: none;
-  }
-
-  .company-outcome {
-    grid-template-columns: 1fr;
-  }
-}
+/* ==========================================
+   EXPERIENCE RESPONSIVE SPACING
+   Tablet/mobile spacing is intentionally kept
+   in assets/css/responsive.css so there is one
+   breakpoint source of truth.
+========================================== */

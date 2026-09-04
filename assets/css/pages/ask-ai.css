@@ -710,6 +710,14 @@ button:focus-visible {
 
 @media (max-width: 700px) {
 
+  /* MOBILE HEADER ALIGNMENT FIX */
+
+  .nav-inner {
+    gap: 0;
+  }
+
+
+
   .container {
     width: calc(100% - 32px);
   }
@@ -1206,3 +1214,257 @@ button:focus-visible {
     display: none;
   }
 }
+
+/* ==========================================
+   ASK VENKAT PROJECT CASE STUDY
+   Added to support projects/ask-venkat/index.html.
+   Original Ask Venkat visual system above is preserved.
+========================================== */
+
+.ask-venkat-project-page .hero {
+  padding: 60px 0 56px;
+}
+
+.ask-venkat-project-page .hero h1 {
+  max-width: 930px;
+  font-size: clamp(52px, 6.2vw, 82px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.ask-venkat-project-page .hero h1 span {
+  display: block;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.ask-venkat-project-page .hero-description {
+  max-width: 640px;
+  margin-top: 28px;
+  color: #44443f;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.ask-venkat-project-page .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.ask-venkat-project-page .primary-action,
+.ask-venkat-project-page .secondary-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ask-venkat-project-page .primary-action {
+  padding: 10px 14px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--white);
+}
+
+.ask-venkat-project-page .secondary-action {
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--text);
+}
+
+.ask-venkat-project-page .section {
+  padding: 72px 0;
+  border-top: 1px solid var(--line);
+}
+
+.ask-venkat-project-page .section-alt {
+  background: #eeede7;
+}
+
+.ask-venkat-project-page .section-grid {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 760px);
+  gap: 70px;
+  align-items: start;
+}
+
+.ask-venkat-project-page .section-content h2,
+.ask-venkat-project-page .architecture-heading h2,
+.ask-venkat-project-page .project-cta h2 {
+  max-width: 900px;
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.ask-venkat-project-page .section-content > p {
+  max-width: 700px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.ask-venkat-project-page .section-content > .lead {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+.ask-venkat-project-page .section-dark {
+  background: var(--text);
+  color: var(--white);
+}
+
+.ask-venkat-project-page .section-dark .section-label {
+  color: #8f908a;
+}
+
+.ask-venkat-project-page .architecture-heading {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 760px);
+  gap: 70px;
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+.ask-venkat-project-page .architecture-flow {
+  display: grid;
+  grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr 28px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.ask-venkat-project-page .architecture-step {
+  min-height: 150px;
+  padding: 20px 16px;
+  border: 1px solid #3f403c;
+}
+
+.ask-venkat-project-page .architecture-step span {
+  display: block;
+  color: #8fa89f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ask-venkat-project-page .architecture-step strong {
+  display: block;
+  margin-top: 28px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.ask-venkat-project-page .architecture-step small {
+  display: block;
+  margin-top: 8px;
+  color: #999a94;
+  font-size: 10px;
+}
+
+.ask-venkat-project-page .architecture-arrow {
+  color: #757670;
+  text-align: center;
+}
+
+.ask-venkat-project-page .tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.ask-venkat-project-page .tech-item {
+  min-height: 108px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ask-venkat-project-page .tech-item:nth-child(odd) {
+  padding-right: 26px;
+  border-right: 1px solid var(--line);
+}
+
+.ask-venkat-project-page .tech-item:nth-child(even) {
+  padding-left: 26px;
+}
+
+.ask-venkat-project-page .tech-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ask-venkat-project-page .tech-item strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.ask-venkat-project-page .decision-list {
+  margin-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.ask-venkat-project-page .decision {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 18px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ask-venkat-project-page .decision span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ask-venkat-project-page .decision p {
+  max-width: 680px;
+  color: #41423d;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.ask-venkat-project-page .project-cta {
+  padding: 68px 0;
+  border-top: 1px solid var(--line);
+}
+
+.ask-venkat-project-page .project-cta-grid {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 760px);
+  gap: 70px;
+  align-items: start;
+}
+
+.ask-venkat-project-page .project-cta p {
+  max-width: 660px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.ask-venkat-project-page .footer-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Project-page responsive behavior is scoped in shared responsive.css. */
