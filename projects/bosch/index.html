@@ -10,18 +10,54 @@ html
 </head>
 <body>
 <div id="progress"></div>
-<nav>
-<div class="nav-inner">
-<a class="logo" href="../../index.html">Venkat</a>
-<div class="nav-links">
-<a href="../../index.html">About</a><a href="../../experience.html">Experience</a>
-<a class="active" href="../index.html">Projects</a><a href="../../contact.html">Contact</a>
-<a class="ask-ai-nav" href="../../ask-ai/">Ask AI</a></div>
+<nav class="site-nav">
+<div class="container nav-inner">
+
+<a
+  href="../../index.html"
+  class="logo"
+  aria-label="Venkat home"
+>
+  Venkat
+</a>
+
+<div
+  class="nav-links"
+  id="navLinks"
+>
+  <a href="../../index.html">About</a>
+  <a href="../../experience.html">Experience</a>
+  <a
+    href="../../projects.html"
+    class="active"
+    aria-current="page"
+  >
+    Projects
+  </a>
+  <a href="../../contact.html">Contact</a>
+  <a href="../../ask-ai/">Ask AI</a>
+</div>
+
+<a class="mobile-ask-ai" href="../../ask-ai/">Ask AI</a>
+
+<button
+  class="menu-toggle"
+  id="menuToggle"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-controls="navLinks"
+  aria-expanded="false"
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
 </div>
 </nav>
 <main>
 <section class="container hero">
-<a class="back" href="../index.html">← Back to projects</a>
+<a class="back" href="../../projects.html">← Back to projects</a>
 <div class="eyebrow">03 / Professional Project Bosch</div>
 <h1>Billing Intelligence <span>Platform</span></h1>
 <p class="tagline">I led the design and build of a billing platform that connected source data, user corrections, invoicing and reporting in one workflow.</p>

@@ -1171,3 +1171,38 @@ button:focus-visible {
 .nav-links .ask-ai-nav:hover,
 .nav-links .ask-ai-nav.active { background: var(--accent); color: var(--bg); }
 .nav-links .ask-ai-nav.active::after { display: none; }
+
+.mobile-ask-ai {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  .mobile-ask-ai {
+    display: inline-flex;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 18px;
+
+    padding: 7px 13px;
+
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .mobile-ask-ai:hover,
+  .mobile-ask-ai.active {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  .nav-links .ask-ai-nav {
+    display: none;
+  }
+}

@@ -121,43 +121,6 @@ svg {
   background: var(--accent);
 }
 
-.menu-toggle {
-  display: none;
-  width: 32px;
-  height: 26px;
-  padding: 2px 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  position: relative;
-  z-index: 1002;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--text);
-  transform-origin: center;
-  transition: transform 0.3s ease, opacity 0.2s ease;
-}
-
-.menu-toggle span + span {
-  margin-top: 6px;
-}
-
-.menu-toggle.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
 /* ==========================================
    TYPOGRAPHY / LABELS
 =========================================== */

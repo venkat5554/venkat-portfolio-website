@@ -13,110 +13,6 @@
   }
 
 
-  /* ========================================
-     NAVIGATION — ALL PAGES
-  ======================================== */
-
-  nav,
-  .site-nav {
-    position: relative;
-    z-index: 1000;
-  }
-
-  .site-nav {
-    padding: 22px 0;
-  }
-
-  nav {
-    height: 76px;
-  }
-
-  .nav-inner {
-    position: relative;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: fixed;
-    inset: 0;
-
-    width: 100%;
-    height: 100dvh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-
-    gap: 0;
-
-    padding: 100px 32px 60px;
-
-    /*
-      About / Experience use --bg.
-      Contact uses --background.
-      The fallback keeps this shared file compatible.
-    */
-    background: var(--bg, var(--background));
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transform: translateY(-12px);
-
-    transition:
-      opacity 0.25s ease,
-      visibility 0.25s ease,
-      transform 0.25s ease;
-
-    z-index: 1001;
-  }
-
-  .nav-links.open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-
-    transform: translateY(0);
-  }
-
-  .nav-links a {
-    width: 100%;
-
-    padding: 14px 0;
-
-    color: var(--muted);
-
-    font-size: clamp(34px, 8vw, 50px);
-    font-weight: 500;
-
-    line-height: 1.15;
-    letter-spacing: -0.035em;
-  }
-
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: var(--text);
-  }
-
-  .nav-links a.active::after {
-    left: auto;
-    right: 0;
-    bottom: 50%;
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: var(--accent);
-
-    transform: translateY(50%);
-  }
 
 
   /* ========================================
@@ -366,18 +262,7 @@
   .container {
     width: calc(100% - 32px);
   }
-
-  .nav-inner {
-    width: calc(100% - 32px);
-  }
-
-  .nav-links {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-
-  /* ========================================
+/* ========================================
      SHARED HERO
   ======================================== */
 
@@ -633,3 +518,150 @@
 .nav-links .ask-ai-nav.active::after {
   display: none;
 }
+
+/* ==========================================
+   SHARED MOBILE NAVIGATION
+========================================== */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.mobile-ask-ai {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  position: relative;
+  z-index: 1002;
+  width: 32px;
+  height: 26px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.menu-toggle span + span {
+  margin-top: 6px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .mobile-ask-ai {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 18px;
+    padding: 7px 13px;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+
+    /* Keep Ask AI green on every mobile page */
+    background: var(--accent);
+    color: var(--bg, var(--background));
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .mobile-ask-ai:hover,
+  .mobile-ask-ai:focus-visible,
+  .mobile-ask-ai.active {
+    background: var(--accent);
+    color: var(--bg, var(--background));
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 32px;
+    background: var(--bg, var(--background));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    width: auto;
+    padding: 4px 0;
+    color: var(--muted);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--text);
+  }
+
+  /* Hide Ask AI from the opened mobile menu.
+     Works even if a page is missing the ask-ai-nav class. */
+  .nav-links .ask-ai-nav,
+  .nav-links a[href*="ask-ai"],
+  .nav-links a[href$="/ask-ai/"],
+  .nav-links a[href$="ask-ai/"] {
+    display: none !important;
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-ask-ai {
+    margin-right: 14px;
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+}
+
