@@ -200,3 +200,56 @@ if (resumeButton) {
   );
 
 }
+
+// ==========================================
+// CONTACT FORM
+// ==========================================
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  const submitButton = contactForm.querySelector(".submit-button");
+
+  contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const originalButtonText = submitButton.innerHTML;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        contactForm.innerHTML = `
+          <div class="form-success" role="status">
+            <div class="success-icon">✓</div>
+
+            <h2>Message sent</h2>
+
+            <p>
+              Thanks for reaching out. I've received your message
+              and will try to get back to you within 24 hours.
+            </p>
+          </div>
+        `;
+      } else {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+        alert("Something went wrong. Please try again.");
+      }
+
+    } catch (error) {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText;
+      alert("Something went wrong. Please try again.");
+    }
+  });
+}
