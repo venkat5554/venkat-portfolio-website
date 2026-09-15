@@ -15,18 +15,8 @@
   />
 
   <title>About — Venkat</title>
-
-  <!-- Main page styles -->
-  <link
-    rel="stylesheet"
-    href="/assets/css/pages/index.css"
-  />
-
-  <!-- Responsive styles must come after main styles -->
-  <link
-    rel="stylesheet"
-    href="/assets/css/responsive.css"
-  />
+  <link rel="stylesheet" href="assets/css/pages/index.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="icon" type="image/png" sizes="64x64" href="./assets/images/profile_pic.png">
 </head>
 
@@ -121,142 +111,82 @@
 
     <section class="container hero">
 
-      <div class="eyebrow">
-        About
-      </div>
+      <div class="hero-copy">
+        <div class="eyebrow">
+          About
+        </div>
 
-      <h1>
-        I turn complexity
-        into<span> systems that work.</span>
-      </h1>
+        <h1>
+          I turn complexity
+          into<span> systems that work.</span>
+        </h1>
 
-      <p class="hero-description">
-        I work at the intersection of data, operations, and technology.
-         I turn fragmented processes and ambiguous problems into measurable 
-         and scalable solutions.
-      </p>
+        <p class="hero-description">
+          I work at the intersection of data, operations, and technology.
+          I turn fragmented processes and ambiguous problems into measurable
+          and scalable solutions.
+        </p>
 
-    </section>
-
-
-
-    <!-- ==========================================
-         INTRO
-    =========================================== -->
-
-    <section class="container intro">
-
-      <div class="section-label">
-        The short version
-      </div>
-
-      <div class="intro-text">
-
-        I am interested in what happens between a problem being identified 
-        and a solution actually becoming part of the process.
-
-        <br><br>
-
-        My work is about finding that gap, understanding it,
-        simplifying it, and building something better.
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ==========================================
-         FRAMEWORK
-    =========================================== -->
-
-    <section class="container framework">
-
-      <h2 class="framework-title">
-        How I work
-      </h2>
-
-
-      <div class="steps">
-
-
-        <!-- Step 01 -->
-        <article class="step">
-
-          <div class="step-number">
-            01
+        <div class="hero-short-version">
+          <div class="section-label">
+            The short version
           </div>
 
-          <h3>
-            Question
-          </h3>
+          <div class="hero-short-text">
+            <p>
+              I am interested in what happens between a problem being identified
+              and a solution actually becoming part of the process.
+            </p>
 
-          <p>
-            I start with why. Before building anything, I want to understand the problem behind the problem.
-          </p>
-
-        </article>
-
-
-        <!-- Step 02 -->
-        <article class="step">
-
-          <div class="step-number">
-            02
+            <p>
+              My work is about finding that gap, understanding it,
+              simplifying it, and building something better.
+            </p>
           </div>
+        </div>
 
-          <h3>
-            Diagnose
-          </h3>
+        <div class="hero-work">
+          <h2>How I work</h2>
 
-          <p>
-            I break complex processes into smaller
-            parts and identify where information, time or
-            decisions get lost.
-          </p>
+          <div class="hero-work-grid">
+            <div class="hero-work-step">
+              <span>01</span>
+              <h3>Question</h3>
+              <p>I start with why. Before building anything, I want to understand the problem behind the problem.</p>
+            </div>
 
-        </article>
+            <div class="hero-work-step">
+              <span>02</span>
+              <h3>Diagnose</h3>
+              <p>I break complex processes into smaller parts and identify where information, time or decisions get lost.</p>
+            </div>
 
+            <div class="hero-work-step">
+              <span>03</span>
+              <h3>Build</h3>
+              <p>I use data, automation and technology to turn the insight into something people can actually use.</p>
+            </div>
 
-        <!-- Step 03 -->
-        <article class="step">
-
-          <div class="step-number">
-            03
+            <div class="hero-work-step">
+              <span>04</span>
+              <h3>Scale</h3>
+              <p>I look beyond the solution once it is in place and think about how it can be adopted, repeated and scaled.</p>
+            </div>
           </div>
-
-          <h3>
-            Build
-          </h3>
-
-          <p>
-            I use data, automation and technology to turn
-            the insight into something people can actually use.
-          </p>
-
-        </article>
-
-
-        <!-- Step 04 -->
-        <article class="step">
-
-          <div class="step-number">
-            04
-          </div>
-
-          <h3>
-            Scale
-          </h3>
-
-          <p>
-            I look beyond the solution once it is in place. I think about how it can be 
-            adopted, made repeatable and scaled to create measurable impact.
-          </p>
-
-        </article>
-
-
+        </div>
       </div>
+
+      <figure class="hero-portrait">
+        <!-- Change this filename if your photo has a different name in assets/images/ -->
+        <img
+          src="./assets/images/profile_pic_about.png"
+          alt="Portrait of Venkat R. Pochana"
+          width="640"
+          height="800"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </figure>
 
     </section>
 
@@ -564,7 +494,6 @@
   =========================================== -->
 
   <script src="/assets/js/main.js"></script>
-
 </body>
 
 </html>
